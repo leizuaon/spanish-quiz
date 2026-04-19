@@ -33,6 +33,19 @@
       <div id="review"></div>
       <button id="restartBtn">Play Again</button>
     </section>
+
+    <section id="progress-section">
+      <h2>📈 Your Progress</h2>
+      <div class="stats-row">
+        <div class="stat"><span id="statGames">0</span><small>Games</small></div>
+        <div class="stat"><span id="statAvg">0</span><small>Average</small></div>
+        <div class="stat"><span id="statBest">0</span><small>Best</small></div>
+        <div class="stat"><span id="statStreak">0</span><small>Streak ≥70</small></div>
+      </div>
+      <canvas id="chart" width="460" height="200"></canvas>
+      <p id="noData" class="muted">Play a round to start tracking!</p>
+      <button id="clearBtn" class="secondary">Reset Progress</button>
+    </section>
   </main>
   <script src="app.js"></script>
 </body>
