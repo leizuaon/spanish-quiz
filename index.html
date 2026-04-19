@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spanish → English Quiz</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>🇪🇸 Spanish → English</h1>
+
+    <section id="start">
+      <p>Translate 10 random Spanish words to English.<br>1000-word vocabulary bank.</p>
+      <button id="startBtn">Start Quiz</button>
+    </section>
+
+    <section id="game" class="hidden">
+      <div class="row">
+        <span id="progress">1 / 10</span>
+        <span id="score">Score: 0</span>
+      </div>
+      <h2 id="spanishWord">palabra</h2>
+      <input id="answerInput" type="text" placeholder="Type English translation…" autocomplete="off" autofocus />
+      <button id="submitBtn">Submit</button>
+      <p id="feedback">&nbsp;</p>
+    </section>
+
+    <section id="result" class="hidden">
+      <h2>Your Grade</h2>
+      <div class="grade-circle" id="gradeCircle">0</div>
+      <p id="summary"></p>
+      <div id="review"></div>
+      <button id="restartBtn">Play Again</button>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

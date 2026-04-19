@@ -1,0 +1,6375 @@
+[
+  {
+    "es": "de",
+    "en": [
+      "of",
+      "from"
+    ]
+  },
+  {
+    "es": "la",
+    "en": [
+      "the"
+    ]
+  },
+  {
+    "es": "que",
+    "en": [
+      "that",
+      "which",
+      "than"
+    ]
+  },
+  {
+    "es": "el",
+    "en": [
+      "the"
+    ]
+  },
+  {
+    "es": "en",
+    "en": [
+      "in",
+      "on",
+      "at"
+    ]
+  },
+  {
+    "es": "y",
+    "en": [
+      "and"
+    ]
+  },
+  {
+    "es": "a",
+    "en": [
+      "to",
+      "at"
+    ]
+  },
+  {
+    "es": "los",
+    "en": [
+      "the"
+    ]
+  },
+  {
+    "es": "del",
+    "en": [
+      "of the",
+      "from the"
+    ]
+  },
+  {
+    "es": "se",
+    "en": [
+      "himself",
+      "herself",
+      "itself",
+      "themselves"
+    ]
+  },
+  {
+    "es": "las",
+    "en": [
+      "the"
+    ]
+  },
+  {
+    "es": "por",
+    "en": [
+      "for",
+      "by",
+      "through"
+    ]
+  },
+  {
+    "es": "un",
+    "en": [
+      "a",
+      "an",
+      "one"
+    ]
+  },
+  {
+    "es": "con",
+    "en": [
+      "with"
+    ]
+  },
+  {
+    "es": "no",
+    "en": [
+      "no",
+      "not"
+    ]
+  },
+  {
+    "es": "una",
+    "en": [
+      "a",
+      "an",
+      "one"
+    ]
+  },
+  {
+    "es": "su",
+    "en": [
+      "his",
+      "her",
+      "your",
+      "their",
+      "its"
+    ]
+  },
+  {
+    "es": "para",
+    "en": [
+      "for",
+      "to",
+      "in order to"
+    ]
+  },
+  {
+    "es": "es",
+    "en": [
+      "is"
+    ]
+  },
+  {
+    "es": "al",
+    "en": [
+      "to the",
+      "at the"
+    ]
+  },
+  {
+    "es": "lo",
+    "en": [
+      "it",
+      "the"
+    ]
+  },
+  {
+    "es": "como",
+    "en": [
+      "like",
+      "as",
+      "how"
+    ]
+  },
+  {
+    "es": "más",
+    "en": [
+      "more",
+      "most",
+      "plus"
+    ]
+  },
+  {
+    "es": "pero",
+    "en": [
+      "but"
+    ]
+  },
+  {
+    "es": "sus",
+    "en": [
+      "his",
+      "her",
+      "your",
+      "their"
+    ]
+  },
+  {
+    "es": "le",
+    "en": [
+      "him",
+      "her",
+      "you"
+    ]
+  },
+  {
+    "es": "ya",
+    "en": [
+      "already",
+      "now"
+    ]
+  },
+  {
+    "es": "o",
+    "en": [
+      "or"
+    ]
+  },
+  {
+    "es": "este",
+    "en": [
+      "this"
+    ]
+  },
+  {
+    "es": "sí",
+    "en": [
+      "yes",
+      "itself"
+    ]
+  },
+  {
+    "es": "porque",
+    "en": [
+      "because"
+    ]
+  },
+  {
+    "es": "esta",
+    "en": [
+      "this"
+    ]
+  },
+  {
+    "es": "entre",
+    "en": [
+      "between",
+      "among"
+    ]
+  },
+  {
+    "es": "cuando",
+    "en": [
+      "when"
+    ]
+  },
+  {
+    "es": "muy",
+    "en": [
+      "very"
+    ]
+  },
+  {
+    "es": "sin",
+    "en": [
+      "without"
+    ]
+  },
+  {
+    "es": "sobre",
+    "en": [
+      "about",
+      "on",
+      "over",
+      "above"
+    ]
+  },
+  {
+    "es": "también",
+    "en": [
+      "also",
+      "too"
+    ]
+  },
+  {
+    "es": "me",
+    "en": [
+      "me",
+      "myself"
+    ]
+  },
+  {
+    "es": "hasta",
+    "en": [
+      "until",
+      "up to",
+      "even"
+    ]
+  },
+  {
+    "es": "hay",
+    "en": [
+      "there is",
+      "there are"
+    ]
+  },
+  {
+    "es": "donde",
+    "en": [
+      "where"
+    ]
+  },
+  {
+    "es": "quien",
+    "en": [
+      "who",
+      "whom"
+    ]
+  },
+  {
+    "es": "desde",
+    "en": [
+      "from",
+      "since"
+    ]
+  },
+  {
+    "es": "todo",
+    "en": [
+      "all",
+      "every",
+      "everything"
+    ]
+  },
+  {
+    "es": "nos",
+    "en": [
+      "us",
+      "ourselves"
+    ]
+  },
+  {
+    "es": "durante",
+    "en": [
+      "during"
+    ]
+  },
+  {
+    "es": "todos",
+    "en": [
+      "all",
+      "everyone",
+      "everybody"
+    ]
+  },
+  {
+    "es": "uno",
+    "en": [
+      "one"
+    ]
+  },
+  {
+    "es": "les",
+    "en": [
+      "them",
+      "you"
+    ]
+  },
+  {
+    "es": "ni",
+    "en": [
+      "neither",
+      "nor",
+      "not even"
+    ]
+  },
+  {
+    "es": "contra",
+    "en": [
+      "against"
+    ]
+  },
+  {
+    "es": "otros",
+    "en": [
+      "others",
+      "other"
+    ]
+  },
+  {
+    "es": "ese",
+    "en": [
+      "that"
+    ]
+  },
+  {
+    "es": "eso",
+    "en": [
+      "that"
+    ]
+  },
+  {
+    "es": "ante",
+    "en": [
+      "before",
+      "in front of"
+    ]
+  },
+  {
+    "es": "ellos",
+    "en": [
+      "they",
+      "them"
+    ]
+  },
+  {
+    "es": "e",
+    "en": [
+      "and"
+    ]
+  },
+  {
+    "es": "esto",
+    "en": [
+      "this"
+    ]
+  },
+  {
+    "es": "mí",
+    "en": [
+      "me"
+    ]
+  },
+  {
+    "es": "antes",
+    "en": [
+      "before"
+    ]
+  },
+  {
+    "es": "algunos",
+    "en": [
+      "some",
+      "a few"
+    ]
+  },
+  {
+    "es": "qué",
+    "en": [
+      "what",
+      "which"
+    ]
+  },
+  {
+    "es": "unos",
+    "en": [
+      "some",
+      "a few"
+    ]
+  },
+  {
+    "es": "yo",
+    "en": [
+      "I"
+    ]
+  },
+  {
+    "es": "otro",
+    "en": [
+      "other",
+      "another"
+    ]
+  },
+  {
+    "es": "otras",
+    "en": [
+      "other",
+      "others"
+    ]
+  },
+  {
+    "es": "otra",
+    "en": [
+      "other",
+      "another"
+    ]
+  },
+  {
+    "es": "él",
+    "en": [
+      "he",
+      "him"
+    ]
+  },
+  {
+    "es": "tanto",
+    "en": [
+      "so much",
+      "as much"
+    ]
+  },
+  {
+    "es": "esa",
+    "en": [
+      "that"
+    ]
+  },
+  {
+    "es": "estos",
+    "en": [
+      "these"
+    ]
+  },
+  {
+    "es": "mucho",
+    "en": [
+      "much",
+      "a lot"
+    ]
+  },
+  {
+    "es": "quién",
+    "en": [
+      "who"
+    ]
+  },
+  {
+    "es": "nada",
+    "en": [
+      "nothing"
+    ]
+  },
+  {
+    "es": "muchos",
+    "en": [
+      "many",
+      "a lot of"
+    ]
+  },
+  {
+    "es": "cual",
+    "en": [
+      "which"
+    ]
+  },
+  {
+    "es": "poco",
+    "en": [
+      "little",
+      "few",
+      "a bit"
+    ]
+  },
+  {
+    "es": "ella",
+    "en": [
+      "she",
+      "her"
+    ]
+  },
+  {
+    "es": "estar",
+    "en": [
+      "to be"
+    ]
+  },
+  {
+    "es": "estas",
+    "en": [
+      "these"
+    ]
+  },
+  {
+    "es": "algunas",
+    "en": [
+      "some"
+    ]
+  },
+  {
+    "es": "algo",
+    "en": [
+      "something",
+      "somewhat"
+    ]
+  },
+  {
+    "es": "nosotros",
+    "en": [
+      "we",
+      "us"
+    ]
+  },
+  {
+    "es": "mi",
+    "en": [
+      "my"
+    ]
+  },
+  {
+    "es": "mis",
+    "en": [
+      "my"
+    ]
+  },
+  {
+    "es": "tú",
+    "en": [
+      "you"
+    ]
+  },
+  {
+    "es": "te",
+    "en": [
+      "you",
+      "yourself"
+    ]
+  },
+  {
+    "es": "ti",
+    "en": [
+      "you"
+    ]
+  },
+  {
+    "es": "ser",
+    "en": [
+      "to be"
+    ]
+  },
+  {
+    "es": "haber",
+    "en": [
+      "to have"
+    ]
+  },
+  {
+    "es": "tener",
+    "en": [
+      "to have",
+      "to hold"
+    ]
+  },
+  {
+    "es": "hacer",
+    "en": [
+      "to do",
+      "to make"
+    ]
+  },
+  {
+    "es": "poder",
+    "en": [
+      "to be able to",
+      "can"
+    ]
+  },
+  {
+    "es": "decir",
+    "en": [
+      "to say",
+      "to tell"
+    ]
+  },
+  {
+    "es": "ir",
+    "en": [
+      "to go"
+    ]
+  },
+  {
+    "es": "ver",
+    "en": [
+      "to see"
+    ]
+  },
+  {
+    "es": "dar",
+    "en": [
+      "to give"
+    ]
+  },
+  {
+    "es": "saber",
+    "en": [
+      "to know"
+    ]
+  },
+  {
+    "es": "querer",
+    "en": [
+      "to want",
+      "to love"
+    ]
+  },
+  {
+    "es": "llegar",
+    "en": [
+      "to arrive",
+      "to reach"
+    ]
+  },
+  {
+    "es": "pasar",
+    "en": [
+      "to pass",
+      "to happen",
+      "to spend"
+    ]
+  },
+  {
+    "es": "deber",
+    "en": [
+      "to owe",
+      "must",
+      "should"
+    ]
+  },
+  {
+    "es": "poner",
+    "en": [
+      "to put",
+      "to place"
+    ]
+  },
+  {
+    "es": "parecer",
+    "en": [
+      "to seem",
+      "to appear"
+    ]
+  },
+  {
+    "es": "quedar",
+    "en": [
+      "to stay",
+      "to remain"
+    ]
+  },
+  {
+    "es": "creer",
+    "en": [
+      "to believe",
+      "to think"
+    ]
+  },
+  {
+    "es": "hablar",
+    "en": [
+      "to speak",
+      "to talk"
+    ]
+  },
+  {
+    "es": "llevar",
+    "en": [
+      "to carry",
+      "to wear",
+      "to take"
+    ]
+  },
+  {
+    "es": "dejar",
+    "en": [
+      "to leave",
+      "to let",
+      "to allow"
+    ]
+  },
+  {
+    "es": "seguir",
+    "en": [
+      "to follow",
+      "to continue"
+    ]
+  },
+  {
+    "es": "encontrar",
+    "en": [
+      "to find",
+      "to meet"
+    ]
+  },
+  {
+    "es": "llamar",
+    "en": [
+      "to call"
+    ]
+  },
+  {
+    "es": "venir",
+    "en": [
+      "to come"
+    ]
+  },
+  {
+    "es": "pensar",
+    "en": [
+      "to think"
+    ]
+  },
+  {
+    "es": "salir",
+    "en": [
+      "to leave",
+      "to go out"
+    ]
+  },
+  {
+    "es": "volver",
+    "en": [
+      "to return",
+      "to come back"
+    ]
+  },
+  {
+    "es": "tomar",
+    "en": [
+      "to take",
+      "to drink"
+    ]
+  },
+  {
+    "es": "conocer",
+    "en": [
+      "to know",
+      "to meet"
+    ]
+  },
+  {
+    "es": "vivir",
+    "en": [
+      "to live"
+    ]
+  },
+  {
+    "es": "sentir",
+    "en": [
+      "to feel"
+    ]
+  },
+  {
+    "es": "tratar",
+    "en": [
+      "to try",
+      "to treat"
+    ]
+  },
+  {
+    "es": "mirar",
+    "en": [
+      "to look",
+      "to watch"
+    ]
+  },
+  {
+    "es": "contar",
+    "en": [
+      "to count",
+      "to tell"
+    ]
+  },
+  {
+    "es": "empezar",
+    "en": [
+      "to start",
+      "to begin"
+    ]
+  },
+  {
+    "es": "esperar",
+    "en": [
+      "to wait",
+      "to hope",
+      "to expect"
+    ]
+  },
+  {
+    "es": "buscar",
+    "en": [
+      "to search",
+      "to look for"
+    ]
+  },
+  {
+    "es": "existir",
+    "en": [
+      "to exist"
+    ]
+  },
+  {
+    "es": "entrar",
+    "en": [
+      "to enter",
+      "to come in"
+    ]
+  },
+  {
+    "es": "trabajar",
+    "en": [
+      "to work"
+    ]
+  },
+  {
+    "es": "escribir",
+    "en": [
+      "to write"
+    ]
+  },
+  {
+    "es": "perder",
+    "en": [
+      "to lose"
+    ]
+  },
+  {
+    "es": "producir",
+    "en": [
+      "to produce"
+    ]
+  },
+  {
+    "es": "ocurrir",
+    "en": [
+      "to occur",
+      "to happen"
+    ]
+  },
+  {
+    "es": "entender",
+    "en": [
+      "to understand"
+    ]
+  },
+  {
+    "es": "pedir",
+    "en": [
+      "to ask for",
+      "to request"
+    ]
+  },
+  {
+    "es": "recibir",
+    "en": [
+      "to receive"
+    ]
+  },
+  {
+    "es": "recordar",
+    "en": [
+      "to remember",
+      "to remind"
+    ]
+  },
+  {
+    "es": "terminar",
+    "en": [
+      "to finish",
+      "to end"
+    ]
+  },
+  {
+    "es": "permitir",
+    "en": [
+      "to allow",
+      "to permit"
+    ]
+  },
+  {
+    "es": "aparecer",
+    "en": [
+      "to appear"
+    ]
+  },
+  {
+    "es": "conseguir",
+    "en": [
+      "to get",
+      "to obtain",
+      "to achieve"
+    ]
+  },
+  {
+    "es": "comenzar",
+    "en": [
+      "to begin",
+      "to start"
+    ]
+  },
+  {
+    "es": "servir",
+    "en": [
+      "to serve"
+    ]
+  },
+  {
+    "es": "sacar",
+    "en": [
+      "to take out",
+      "to remove"
+    ]
+  },
+  {
+    "es": "necesitar",
+    "en": [
+      "to need"
+    ]
+  },
+  {
+    "es": "mantener",
+    "en": [
+      "to maintain",
+      "to keep"
+    ]
+  },
+  {
+    "es": "resultar",
+    "en": [
+      "to result",
+      "to turn out"
+    ]
+  },
+  {
+    "es": "leer",
+    "en": [
+      "to read"
+    ]
+  },
+  {
+    "es": "caer",
+    "en": [
+      "to fall"
+    ]
+  },
+  {
+    "es": "cambiar",
+    "en": [
+      "to change"
+    ]
+  },
+  {
+    "es": "presentar",
+    "en": [
+      "to present",
+      "to introduce"
+    ]
+  },
+  {
+    "es": "crear",
+    "en": [
+      "to create"
+    ]
+  },
+  {
+    "es": "abrir",
+    "en": [
+      "to open"
+    ]
+  },
+  {
+    "es": "considerar",
+    "en": [
+      "to consider"
+    ]
+  },
+  {
+    "es": "oír",
+    "en": [
+      "to hear"
+    ]
+  },
+  {
+    "es": "acabar",
+    "en": [
+      "to finish",
+      "to end"
+    ]
+  },
+  {
+    "es": "convertir",
+    "en": [
+      "to convert",
+      "to turn into"
+    ]
+  },
+  {
+    "es": "ganar",
+    "en": [
+      "to win",
+      "to earn"
+    ]
+  },
+  {
+    "es": "formar",
+    "en": [
+      "to form",
+      "to shape"
+    ]
+  },
+  {
+    "es": "traer",
+    "en": [
+      "to bring"
+    ]
+  },
+  {
+    "es": "partir",
+    "en": [
+      "to leave",
+      "to depart",
+      "to split"
+    ]
+  },
+  {
+    "es": "morir",
+    "en": [
+      "to die"
+    ]
+  },
+  {
+    "es": "aceptar",
+    "en": [
+      "to accept"
+    ]
+  },
+  {
+    "es": "realizar",
+    "en": [
+      "to carry out",
+      "to accomplish"
+    ]
+  },
+  {
+    "es": "suponer",
+    "en": [
+      "to suppose",
+      "to assume"
+    ]
+  },
+  {
+    "es": "comprender",
+    "en": [
+      "to understand",
+      "to comprehend"
+    ]
+  },
+  {
+    "es": "lograr",
+    "en": [
+      "to achieve",
+      "to manage to"
+    ]
+  },
+  {
+    "es": "explicar",
+    "en": [
+      "to explain"
+    ]
+  },
+  {
+    "es": "preguntar",
+    "en": [
+      "to ask"
+    ]
+  },
+  {
+    "es": "tocar",
+    "en": [
+      "to touch",
+      "to play"
+    ]
+  },
+  {
+    "es": "reconocer",
+    "en": [
+      "to recognize"
+    ]
+  },
+  {
+    "es": "estudiar",
+    "en": [
+      "to study"
+    ]
+  },
+  {
+    "es": "alcanzar",
+    "en": [
+      "to reach",
+      "to achieve"
+    ]
+  },
+  {
+    "es": "nacer",
+    "en": [
+      "to be born"
+    ]
+  },
+  {
+    "es": "dirigir",
+    "en": [
+      "to direct",
+      "to lead"
+    ]
+  },
+  {
+    "es": "correr",
+    "en": [
+      "to run"
+    ]
+  },
+  {
+    "es": "utilizar",
+    "en": [
+      "to use",
+      "to utilize"
+    ]
+  },
+  {
+    "es": "pagar",
+    "en": [
+      "to pay"
+    ]
+  },
+  {
+    "es": "ayudar",
+    "en": [
+      "to help"
+    ]
+  },
+  {
+    "es": "gustar",
+    "en": [
+      "to like",
+      "to please"
+    ]
+  },
+  {
+    "es": "jugar",
+    "en": [
+      "to play"
+    ]
+  },
+  {
+    "es": "escuchar",
+    "en": [
+      "to listen"
+    ]
+  },
+  {
+    "es": "cumplir",
+    "en": [
+      "to fulfill",
+      "to comply"
+    ]
+  },
+  {
+    "es": "ofrecer",
+    "en": [
+      "to offer"
+    ]
+  },
+  {
+    "es": "descubrir",
+    "en": [
+      "to discover"
+    ]
+  },
+  {
+    "es": "levantar",
+    "en": [
+      "to lift",
+      "to raise"
+    ]
+  },
+  {
+    "es": "intentar",
+    "en": [
+      "to try",
+      "to attempt"
+    ]
+  },
+  {
+    "es": "usar",
+    "en": [
+      "to use"
+    ]
+  },
+  {
+    "es": "olvidar",
+    "en": [
+      "to forget"
+    ]
+  },
+  {
+    "es": "comprar",
+    "en": [
+      "to buy",
+      "to purchase"
+    ]
+  },
+  {
+    "es": "vender",
+    "en": [
+      "to sell"
+    ]
+  },
+  {
+    "es": "dormir",
+    "en": [
+      "to sleep"
+    ]
+  },
+  {
+    "es": "caminar",
+    "en": [
+      "to walk"
+    ]
+  },
+  {
+    "es": "comer",
+    "en": [
+      "to eat"
+    ]
+  },
+  {
+    "es": "beber",
+    "en": [
+      "to drink"
+    ]
+  },
+  {
+    "es": "cocinar",
+    "en": [
+      "to cook"
+    ]
+  },
+  {
+    "es": "lavar",
+    "en": [
+      "to wash"
+    ]
+  },
+  {
+    "es": "limpiar",
+    "en": [
+      "to clean"
+    ]
+  },
+  {
+    "es": "cerrar",
+    "en": [
+      "to close",
+      "to shut"
+    ]
+  },
+  {
+    "es": "responder",
+    "en": [
+      "to answer",
+      "to respond"
+    ]
+  },
+  {
+    "es": "mover",
+    "en": [
+      "to move"
+    ]
+  },
+  {
+    "es": "nadar",
+    "en": [
+      "to swim"
+    ]
+  },
+  {
+    "es": "cantar",
+    "en": [
+      "to sing"
+    ]
+  },
+  {
+    "es": "bailar",
+    "en": [
+      "to dance"
+    ]
+  },
+  {
+    "es": "viajar",
+    "en": [
+      "to travel"
+    ]
+  },
+  {
+    "es": "enseñar",
+    "en": [
+      "to teach",
+      "to show"
+    ]
+  },
+  {
+    "es": "aprender",
+    "en": [
+      "to learn"
+    ]
+  },
+  {
+    "es": "enviar",
+    "en": [
+      "to send"
+    ]
+  },
+  {
+    "es": "matar",
+    "en": [
+      "to kill"
+    ]
+  },
+  {
+    "es": "mostrar",
+    "en": [
+      "to show"
+    ]
+  },
+  {
+    "es": "elegir",
+    "en": [
+      "to choose",
+      "to elect"
+    ]
+  },
+  {
+    "es": "subir",
+    "en": [
+      "to go up",
+      "to climb",
+      "to upload"
+    ]
+  },
+  {
+    "es": "bajar",
+    "en": [
+      "to go down",
+      "to lower",
+      "to download"
+    ]
+  },
+  {
+    "es": "celebrar",
+    "en": [
+      "to celebrate"
+    ]
+  },
+  {
+    "es": "compartir",
+    "en": [
+      "to share"
+    ]
+  },
+  {
+    "es": "construir",
+    "en": [
+      "to build",
+      "to construct"
+    ]
+  },
+  {
+    "es": "decidir",
+    "en": [
+      "to decide"
+    ]
+  },
+  {
+    "es": "desarrollar",
+    "en": [
+      "to develop"
+    ]
+  },
+  {
+    "es": "dibujar",
+    "en": [
+      "to draw"
+    ]
+  },
+  {
+    "es": "devolver",
+    "en": [
+      "to return",
+      "to give back"
+    ]
+  },
+  {
+    "es": "tiempo",
+    "en": [
+      "time",
+      "weather"
+    ]
+  },
+  {
+    "es": "año",
+    "en": [
+      "year"
+    ]
+  },
+  {
+    "es": "día",
+    "en": [
+      "day"
+    ]
+  },
+  {
+    "es": "país",
+    "en": [
+      "country"
+    ]
+  },
+  {
+    "es": "mundo",
+    "en": [
+      "world"
+    ]
+  },
+  {
+    "es": "casa",
+    "en": [
+      "house",
+      "home"
+    ]
+  },
+  {
+    "es": "parte",
+    "en": [
+      "part"
+    ]
+  },
+  {
+    "es": "vida",
+    "en": [
+      "life"
+    ]
+  },
+  {
+    "es": "hombre",
+    "en": [
+      "man"
+    ]
+  },
+  {
+    "es": "mujer",
+    "en": [
+      "woman",
+      "wife"
+    ]
+  },
+  {
+    "es": "niño",
+    "en": [
+      "boy",
+      "child"
+    ]
+  },
+  {
+    "es": "niña",
+    "en": [
+      "girl"
+    ]
+  },
+  {
+    "es": "cosa",
+    "en": [
+      "thing"
+    ]
+  },
+  {
+    "es": "vez",
+    "en": [
+      "time",
+      "occasion"
+    ]
+  },
+  {
+    "es": "momento",
+    "en": [
+      "moment"
+    ]
+  },
+  {
+    "es": "gobierno",
+    "en": [
+      "government"
+    ]
+  },
+  {
+    "es": "forma",
+    "en": [
+      "form",
+      "shape",
+      "way"
+    ]
+  },
+  {
+    "es": "persona",
+    "en": [
+      "person"
+    ]
+  },
+  {
+    "es": "grupo",
+    "en": [
+      "group"
+    ]
+  },
+  {
+    "es": "problema",
+    "en": [
+      "problem"
+    ]
+  },
+  {
+    "es": "punto",
+    "en": [
+      "point",
+      "dot"
+    ]
+  },
+  {
+    "es": "estado",
+    "en": [
+      "state",
+      "status"
+    ]
+  },
+  {
+    "es": "ciudad",
+    "en": [
+      "city"
+    ]
+  },
+  {
+    "es": "pueblo",
+    "en": [
+      "town",
+      "village",
+      "people"
+    ]
+  },
+  {
+    "es": "trabajo",
+    "en": [
+      "work",
+      "job"
+    ]
+  },
+  {
+    "es": "nombre",
+    "en": [
+      "name"
+    ]
+  },
+  {
+    "es": "familia",
+    "en": [
+      "family"
+    ]
+  },
+  {
+    "es": "agua",
+    "en": [
+      "water"
+    ]
+  },
+  {
+    "es": "ejemplo",
+    "en": [
+      "example"
+    ]
+  },
+  {
+    "es": "historia",
+    "en": [
+      "history",
+      "story"
+    ]
+  },
+  {
+    "es": "lugar",
+    "en": [
+      "place"
+    ]
+  },
+  {
+    "es": "razón",
+    "en": [
+      "reason"
+    ]
+  },
+  {
+    "es": "palabra",
+    "en": [
+      "word"
+    ]
+  },
+  {
+    "es": "caso",
+    "en": [
+      "case"
+    ]
+  },
+  {
+    "es": "ojo",
+    "en": [
+      "eye"
+    ]
+  },
+  {
+    "es": "mano",
+    "en": [
+      "hand"
+    ]
+  },
+  {
+    "es": "cuerpo",
+    "en": [
+      "body"
+    ]
+  },
+  {
+    "es": "cabeza",
+    "en": [
+      "head"
+    ]
+  },
+  {
+    "es": "lado",
+    "en": [
+      "side"
+    ]
+  },
+  {
+    "es": "número",
+    "en": [
+      "number"
+    ]
+  },
+  {
+    "es": "tipo",
+    "en": [
+      "type",
+      "kind",
+      "guy"
+    ]
+  },
+  {
+    "es": "hijo",
+    "en": [
+      "son",
+      "child"
+    ]
+  },
+  {
+    "es": "hija",
+    "en": [
+      "daughter"
+    ]
+  },
+  {
+    "es": "padre",
+    "en": [
+      "father"
+    ]
+  },
+  {
+    "es": "madre",
+    "en": [
+      "mother"
+    ]
+  },
+  {
+    "es": "hermano",
+    "en": [
+      "brother"
+    ]
+  },
+  {
+    "es": "hermana",
+    "en": [
+      "sister"
+    ]
+  },
+  {
+    "es": "abuelo",
+    "en": [
+      "grandfather"
+    ]
+  },
+  {
+    "es": "abuela",
+    "en": [
+      "grandmother"
+    ]
+  },
+  {
+    "es": "tío",
+    "en": [
+      "uncle"
+    ]
+  },
+  {
+    "es": "tía",
+    "en": [
+      "aunt"
+    ]
+  },
+  {
+    "es": "primo",
+    "en": [
+      "cousin"
+    ]
+  },
+  {
+    "es": "esposo",
+    "en": [
+      "husband"
+    ]
+  },
+  {
+    "es": "esposa",
+    "en": [
+      "wife"
+    ]
+  },
+  {
+    "es": "bebé",
+    "en": [
+      "baby"
+    ]
+  },
+  {
+    "es": "amigo",
+    "en": [
+      "friend"
+    ]
+  },
+  {
+    "es": "amiga",
+    "en": [
+      "friend"
+    ]
+  },
+  {
+    "es": "vecino",
+    "en": [
+      "neighbor"
+    ]
+  },
+  {
+    "es": "mesa",
+    "en": [
+      "table"
+    ]
+  },
+  {
+    "es": "silla",
+    "en": [
+      "chair"
+    ]
+  },
+  {
+    "es": "puerta",
+    "en": [
+      "door"
+    ]
+  },
+  {
+    "es": "ventana",
+    "en": [
+      "window"
+    ]
+  },
+  {
+    "es": "calle",
+    "en": [
+      "street"
+    ]
+  },
+  {
+    "es": "camino",
+    "en": [
+      "road",
+      "path",
+      "way"
+    ]
+  },
+  {
+    "es": "coche",
+    "en": [
+      "car"
+    ]
+  },
+  {
+    "es": "libro",
+    "en": [
+      "book"
+    ]
+  },
+  {
+    "es": "escuela",
+    "en": [
+      "school"
+    ]
+  },
+  {
+    "es": "clase",
+    "en": [
+      "class"
+    ]
+  },
+  {
+    "es": "dinero",
+    "en": [
+      "money"
+    ]
+  },
+  {
+    "es": "comida",
+    "en": [
+      "food",
+      "meal"
+    ]
+  },
+  {
+    "es": "noche",
+    "en": [
+      "night"
+    ]
+  },
+  {
+    "es": "mañana",
+    "en": [
+      "morning",
+      "tomorrow"
+    ]
+  },
+  {
+    "es": "tarde",
+    "en": [
+      "afternoon",
+      "evening",
+      "late"
+    ]
+  },
+  {
+    "es": "hora",
+    "en": [
+      "hour",
+      "time"
+    ]
+  },
+  {
+    "es": "semana",
+    "en": [
+      "week"
+    ]
+  },
+  {
+    "es": "mes",
+    "en": [
+      "month"
+    ]
+  },
+  {
+    "es": "guerra",
+    "en": [
+      "war"
+    ]
+  },
+  {
+    "es": "idea",
+    "en": [
+      "idea"
+    ]
+  },
+  {
+    "es": "manera",
+    "en": [
+      "way",
+      "manner"
+    ]
+  },
+  {
+    "es": "medio",
+    "en": [
+      "middle",
+      "means",
+      "half"
+    ]
+  },
+  {
+    "es": "fuerza",
+    "en": [
+      "force",
+      "strength"
+    ]
+  },
+  {
+    "es": "luz",
+    "en": [
+      "light"
+    ]
+  },
+  {
+    "es": "fin",
+    "en": [
+      "end"
+    ]
+  },
+  {
+    "es": "relación",
+    "en": [
+      "relationship",
+      "relation"
+    ]
+  },
+  {
+    "es": "derecho",
+    "en": [
+      "right",
+      "law"
+    ]
+  },
+  {
+    "es": "muerte",
+    "en": [
+      "death"
+    ]
+  },
+  {
+    "es": "situación",
+    "en": [
+      "situation"
+    ]
+  },
+  {
+    "es": "cuenta",
+    "en": [
+      "account",
+      "bill"
+    ]
+  },
+  {
+    "es": "mercado",
+    "en": [
+      "market"
+    ]
+  },
+  {
+    "es": "nivel",
+    "en": [
+      "level"
+    ]
+  },
+  {
+    "es": "tierra",
+    "en": [
+      "earth",
+      "land",
+      "ground"
+    ]
+  },
+  {
+    "es": "paso",
+    "en": [
+      "step"
+    ]
+  },
+  {
+    "es": "juego",
+    "en": [
+      "game"
+    ]
+  },
+  {
+    "es": "centro",
+    "en": [
+      "center"
+    ]
+  },
+  {
+    "es": "pie",
+    "en": [
+      "foot"
+    ]
+  },
+  {
+    "es": "arte",
+    "en": [
+      "art"
+    ]
+  },
+  {
+    "es": "ley",
+    "en": [
+      "law"
+    ]
+  },
+  {
+    "es": "iglesia",
+    "en": [
+      "church"
+    ]
+  },
+  {
+    "es": "cama",
+    "en": [
+      "bed"
+    ]
+  },
+  {
+    "es": "campo",
+    "en": [
+      "field",
+      "countryside"
+    ]
+  },
+  {
+    "es": "niñez",
+    "en": [
+      "childhood"
+    ]
+  },
+  {
+    "es": "programa",
+    "en": [
+      "program"
+    ]
+  },
+  {
+    "es": "sistema",
+    "en": [
+      "system"
+    ]
+  },
+  {
+    "es": "pregunta",
+    "en": [
+      "question"
+    ]
+  },
+  {
+    "es": "respuesta",
+    "en": [
+      "answer",
+      "response"
+    ]
+  },
+  {
+    "es": "verdad",
+    "en": [
+      "truth"
+    ]
+  },
+  {
+    "es": "acuerdo",
+    "en": [
+      "agreement"
+    ]
+  },
+  {
+    "es": "sol",
+    "en": [
+      "sun"
+    ]
+  },
+  {
+    "es": "luna",
+    "en": [
+      "moon"
+    ]
+  },
+  {
+    "es": "estrella",
+    "en": [
+      "star"
+    ]
+  },
+  {
+    "es": "cielo",
+    "en": [
+      "sky",
+      "heaven"
+    ]
+  },
+  {
+    "es": "mar",
+    "en": [
+      "sea"
+    ]
+  },
+  {
+    "es": "río",
+    "en": [
+      "river"
+    ]
+  },
+  {
+    "es": "montaña",
+    "en": [
+      "mountain"
+    ]
+  },
+  {
+    "es": "árbol",
+    "en": [
+      "tree"
+    ]
+  },
+  {
+    "es": "flor",
+    "en": [
+      "flower"
+    ]
+  },
+  {
+    "es": "playa",
+    "en": [
+      "beach"
+    ]
+  },
+  {
+    "es": "isla",
+    "en": [
+      "island"
+    ]
+  },
+  {
+    "es": "piedra",
+    "en": [
+      "stone",
+      "rock"
+    ]
+  },
+  {
+    "es": "fuego",
+    "en": [
+      "fire"
+    ]
+  },
+  {
+    "es": "aire",
+    "en": [
+      "air"
+    ]
+  },
+  {
+    "es": "lluvia",
+    "en": [
+      "rain"
+    ]
+  },
+  {
+    "es": "nieve",
+    "en": [
+      "snow"
+    ]
+  },
+  {
+    "es": "viento",
+    "en": [
+      "wind"
+    ]
+  },
+  {
+    "es": "nube",
+    "en": [
+      "cloud"
+    ]
+  },
+  {
+    "es": "grande",
+    "en": [
+      "big",
+      "large",
+      "great"
+    ]
+  },
+  {
+    "es": "pequeño",
+    "en": [
+      "small",
+      "little"
+    ]
+  },
+  {
+    "es": "nuevo",
+    "en": [
+      "new"
+    ]
+  },
+  {
+    "es": "viejo",
+    "en": [
+      "old"
+    ]
+  },
+  {
+    "es": "bueno",
+    "en": [
+      "good"
+    ]
+  },
+  {
+    "es": "malo",
+    "en": [
+      "bad"
+    ]
+  },
+  {
+    "es": "mejor",
+    "en": [
+      "better",
+      "best"
+    ]
+  },
+  {
+    "es": "peor",
+    "en": [
+      "worse",
+      "worst"
+    ]
+  },
+  {
+    "es": "mismo",
+    "en": [
+      "same",
+      "self"
+    ]
+  },
+  {
+    "es": "largo",
+    "en": [
+      "long"
+    ]
+  },
+  {
+    "es": "corto",
+    "en": [
+      "short"
+    ]
+  },
+  {
+    "es": "alto",
+    "en": [
+      "tall",
+      "high"
+    ]
+  },
+  {
+    "es": "bajo",
+    "en": [
+      "short",
+      "low"
+    ]
+  },
+  {
+    "es": "joven",
+    "en": [
+      "young"
+    ]
+  },
+  {
+    "es": "importante",
+    "en": [
+      "important"
+    ]
+  },
+  {
+    "es": "diferente",
+    "en": [
+      "different"
+    ]
+  },
+  {
+    "es": "posible",
+    "en": [
+      "possible"
+    ]
+  },
+  {
+    "es": "último",
+    "en": [
+      "last",
+      "latest"
+    ]
+  },
+  {
+    "es": "primero",
+    "en": [
+      "first"
+    ]
+  },
+  {
+    "es": "segundo",
+    "en": [
+      "second"
+    ]
+  },
+  {
+    "es": "tercero",
+    "en": [
+      "third"
+    ]
+  },
+  {
+    "es": "siguiente",
+    "en": [
+      "next",
+      "following"
+    ]
+  },
+  {
+    "es": "anterior",
+    "en": [
+      "previous"
+    ]
+  },
+  {
+    "es": "cierto",
+    "en": [
+      "certain",
+      "true"
+    ]
+  },
+  {
+    "es": "propio",
+    "en": [
+      "own"
+    ]
+  },
+  {
+    "es": "único",
+    "en": [
+      "only",
+      "unique"
+    ]
+  },
+  {
+    "es": "difícil",
+    "en": [
+      "difficult",
+      "hard"
+    ]
+  },
+  {
+    "es": "fácil",
+    "en": [
+      "easy"
+    ]
+  },
+  {
+    "es": "fuerte",
+    "en": [
+      "strong"
+    ]
+  },
+  {
+    "es": "débil",
+    "en": [
+      "weak"
+    ]
+  },
+  {
+    "es": "rápido",
+    "en": [
+      "fast",
+      "quick"
+    ]
+  },
+  {
+    "es": "lento",
+    "en": [
+      "slow"
+    ]
+  },
+  {
+    "es": "libre",
+    "en": [
+      "free"
+    ]
+  },
+  {
+    "es": "claro",
+    "en": [
+      "clear",
+      "of course"
+    ]
+  },
+  {
+    "es": "oscuro",
+    "en": [
+      "dark"
+    ]
+  },
+  {
+    "es": "lleno",
+    "en": [
+      "full"
+    ]
+  },
+  {
+    "es": "vacío",
+    "en": [
+      "empty"
+    ]
+  },
+  {
+    "es": "frío",
+    "en": [
+      "cold"
+    ]
+  },
+  {
+    "es": "caliente",
+    "en": [
+      "hot"
+    ]
+  },
+  {
+    "es": "bonito",
+    "en": [
+      "pretty",
+      "beautiful"
+    ]
+  },
+  {
+    "es": "hermoso",
+    "en": [
+      "beautiful"
+    ]
+  },
+  {
+    "es": "feo",
+    "en": [
+      "ugly"
+    ]
+  },
+  {
+    "es": "rico",
+    "en": [
+      "rich",
+      "delicious"
+    ]
+  },
+  {
+    "es": "pobre",
+    "en": [
+      "poor"
+    ]
+  },
+  {
+    "es": "gordo",
+    "en": [
+      "fat"
+    ]
+  },
+  {
+    "es": "delgado",
+    "en": [
+      "thin",
+      "slim"
+    ]
+  },
+  {
+    "es": "limpio",
+    "en": [
+      "clean"
+    ]
+  },
+  {
+    "es": "sucio",
+    "en": [
+      "dirty"
+    ]
+  },
+  {
+    "es": "seco",
+    "en": [
+      "dry"
+    ]
+  },
+  {
+    "es": "mojado",
+    "en": [
+      "wet"
+    ]
+  },
+  {
+    "es": "duro",
+    "en": [
+      "hard",
+      "tough"
+    ]
+  },
+  {
+    "es": "blando",
+    "en": [
+      "soft"
+    ]
+  },
+  {
+    "es": "ancho",
+    "en": [
+      "wide"
+    ]
+  },
+  {
+    "es": "estrecho",
+    "en": [
+      "narrow"
+    ]
+  },
+  {
+    "es": "profundo",
+    "en": [
+      "deep"
+    ]
+  },
+  {
+    "es": "cercano",
+    "en": [
+      "near",
+      "close"
+    ]
+  },
+  {
+    "es": "lejano",
+    "en": [
+      "far",
+      "distant"
+    ]
+  },
+  {
+    "es": "derecha",
+    "en": [
+      "right"
+    ]
+  },
+  {
+    "es": "izquierda",
+    "en": [
+      "left"
+    ]
+  },
+  {
+    "es": "seguro",
+    "en": [
+      "safe",
+      "sure",
+      "secure"
+    ]
+  },
+  {
+    "es": "peligroso",
+    "en": [
+      "dangerous"
+    ]
+  },
+  {
+    "es": "feliz",
+    "en": [
+      "happy"
+    ]
+  },
+  {
+    "es": "triste",
+    "en": [
+      "sad"
+    ]
+  },
+  {
+    "es": "enfermo",
+    "en": [
+      "sick",
+      "ill"
+    ]
+  },
+  {
+    "es": "sano",
+    "en": [
+      "healthy"
+    ]
+  },
+  {
+    "es": "cansado",
+    "en": [
+      "tired"
+    ]
+  },
+  {
+    "es": "loco",
+    "en": [
+      "crazy"
+    ]
+  },
+  {
+    "es": "tranquilo",
+    "en": [
+      "calm",
+      "quiet"
+    ]
+  },
+  {
+    "es": "ocupado",
+    "en": [
+      "busy",
+      "occupied"
+    ]
+  },
+  {
+    "es": "barato",
+    "en": [
+      "cheap"
+    ]
+  },
+  {
+    "es": "caro",
+    "en": [
+      "expensive"
+    ]
+  },
+  {
+    "es": "abierto",
+    "en": [
+      "open"
+    ]
+  },
+  {
+    "es": "cerrado",
+    "en": [
+      "closed"
+    ]
+  },
+  {
+    "es": "vivo",
+    "en": [
+      "alive",
+      "lively"
+    ]
+  },
+  {
+    "es": "muerto",
+    "en": [
+      "dead"
+    ]
+  },
+  {
+    "es": "correcto",
+    "en": [
+      "correct",
+      "right"
+    ]
+  },
+  {
+    "es": "equivocado",
+    "en": [
+      "wrong",
+      "mistaken"
+    ]
+  },
+  {
+    "es": "necesario",
+    "en": [
+      "necessary"
+    ]
+  },
+  {
+    "es": "capaz",
+    "en": [
+      "capable",
+      "able"
+    ]
+  },
+  {
+    "es": "listo",
+    "en": [
+      "ready",
+      "clever"
+    ]
+  },
+  {
+    "es": "contento",
+    "en": [
+      "happy",
+      "content"
+    ]
+  },
+  {
+    "es": "enfadado",
+    "en": [
+      "angry",
+      "mad"
+    ]
+  },
+  {
+    "es": "preocupado",
+    "en": [
+      "worried"
+    ]
+  },
+  {
+    "es": "interesante",
+    "en": [
+      "interesting"
+    ]
+  },
+  {
+    "es": "aburrido",
+    "en": [
+      "boring",
+      "bored"
+    ]
+  },
+  {
+    "es": "divertido",
+    "en": [
+      "fun",
+      "funny"
+    ]
+  },
+  {
+    "es": "serio",
+    "en": [
+      "serious"
+    ]
+  },
+  {
+    "es": "dulce",
+    "en": [
+      "sweet"
+    ]
+  },
+  {
+    "es": "amargo",
+    "en": [
+      "bitter"
+    ]
+  },
+  {
+    "es": "salado",
+    "en": [
+      "salty"
+    ]
+  },
+  {
+    "es": "agrio",
+    "en": [
+      "sour"
+    ]
+  },
+  {
+    "es": "bien",
+    "en": [
+      "well",
+      "good"
+    ]
+  },
+  {
+    "es": "mal",
+    "en": [
+      "bad",
+      "badly"
+    ]
+  },
+  {
+    "es": "aquí",
+    "en": [
+      "here"
+    ]
+  },
+  {
+    "es": "ahí",
+    "en": [
+      "there"
+    ]
+  },
+  {
+    "es": "allí",
+    "en": [
+      "there",
+      "over there"
+    ]
+  },
+  {
+    "es": "así",
+    "en": [
+      "like this",
+      "so",
+      "thus"
+    ]
+  },
+  {
+    "es": "siempre",
+    "en": [
+      "always"
+    ]
+  },
+  {
+    "es": "nunca",
+    "en": [
+      "never"
+    ]
+  },
+  {
+    "es": "ahora",
+    "en": [
+      "now"
+    ]
+  },
+  {
+    "es": "después",
+    "en": [
+      "after",
+      "later"
+    ]
+  },
+  {
+    "es": "hoy",
+    "en": [
+      "today"
+    ]
+  },
+  {
+    "es": "ayer",
+    "en": [
+      "yesterday"
+    ]
+  },
+  {
+    "es": "pronto",
+    "en": [
+      "soon"
+    ]
+  },
+  {
+    "es": "luego",
+    "en": [
+      "then",
+      "later"
+    ]
+  },
+  {
+    "es": "todavía",
+    "en": [
+      "still",
+      "yet"
+    ]
+  },
+  {
+    "es": "casi",
+    "en": [
+      "almost",
+      "nearly"
+    ]
+  },
+  {
+    "es": "quizás",
+    "en": [
+      "maybe",
+      "perhaps"
+    ]
+  },
+  {
+    "es": "bastante",
+    "en": [
+      "enough",
+      "quite"
+    ]
+  },
+  {
+    "es": "demasiado",
+    "en": [
+      "too much",
+      "too"
+    ]
+  },
+  {
+    "es": "tan",
+    "en": [
+      "so",
+      "as"
+    ]
+  },
+  {
+    "es": "sólo",
+    "en": [
+      "only",
+      "just"
+    ]
+  },
+  {
+    "es": "apenas",
+    "en": [
+      "barely",
+      "hardly"
+    ]
+  },
+  {
+    "es": "además",
+    "en": [
+      "besides",
+      "moreover"
+    ]
+  },
+  {
+    "es": "tampoco",
+    "en": [
+      "neither",
+      "not either"
+    ]
+  },
+  {
+    "es": "incluso",
+    "en": [
+      "even",
+      "including"
+    ]
+  },
+  {
+    "es": "aún",
+    "en": [
+      "still",
+      "even"
+    ]
+  },
+  {
+    "es": "mientras",
+    "en": [
+      "while"
+    ]
+  },
+  {
+    "es": "arriba",
+    "en": [
+      "up",
+      "above"
+    ]
+  },
+  {
+    "es": "abajo",
+    "en": [
+      "down",
+      "below"
+    ]
+  },
+  {
+    "es": "dentro",
+    "en": [
+      "inside"
+    ]
+  },
+  {
+    "es": "fuera",
+    "en": [
+      "outside"
+    ]
+  },
+  {
+    "es": "cerca",
+    "en": [
+      "near",
+      "close"
+    ]
+  },
+  {
+    "es": "lejos",
+    "en": [
+      "far"
+    ]
+  },
+  {
+    "es": "adelante",
+    "en": [
+      "forward",
+      "ahead"
+    ]
+  },
+  {
+    "es": "atrás",
+    "en": [
+      "back",
+      "behind"
+    ]
+  },
+  {
+    "es": "despacio",
+    "en": [
+      "slowly"
+    ]
+  },
+  {
+    "es": "deprisa",
+    "en": [
+      "quickly",
+      "fast"
+    ]
+  },
+  {
+    "es": "juntos",
+    "en": [
+      "together"
+    ]
+  },
+  {
+    "es": "solo",
+    "en": [
+      "alone",
+      "only"
+    ]
+  },
+  {
+    "es": "sino",
+    "en": [
+      "but",
+      "rather"
+    ]
+  },
+  {
+    "es": "aunque",
+    "en": [
+      "although",
+      "even though"
+    ]
+  },
+  {
+    "es": "pues",
+    "en": [
+      "well",
+      "then",
+      "since"
+    ]
+  },
+  {
+    "es": "según",
+    "en": [
+      "according to"
+    ]
+  },
+  {
+    "es": "hacia",
+    "en": [
+      "toward",
+      "towards"
+    ]
+  },
+  {
+    "es": "tras",
+    "en": [
+      "after",
+      "behind"
+    ]
+  },
+  {
+    "es": "cero",
+    "en": [
+      "zero"
+    ]
+  },
+  {
+    "es": "dos",
+    "en": [
+      "two"
+    ]
+  },
+  {
+    "es": "tres",
+    "en": [
+      "three"
+    ]
+  },
+  {
+    "es": "cuatro",
+    "en": [
+      "four"
+    ]
+  },
+  {
+    "es": "cinco",
+    "en": [
+      "five"
+    ]
+  },
+  {
+    "es": "seis",
+    "en": [
+      "six"
+    ]
+  },
+  {
+    "es": "siete",
+    "en": [
+      "seven"
+    ]
+  },
+  {
+    "es": "ocho",
+    "en": [
+      "eight"
+    ]
+  },
+  {
+    "es": "nueve",
+    "en": [
+      "nine"
+    ]
+  },
+  {
+    "es": "diez",
+    "en": [
+      "ten"
+    ]
+  },
+  {
+    "es": "once",
+    "en": [
+      "eleven"
+    ]
+  },
+  {
+    "es": "doce",
+    "en": [
+      "twelve"
+    ]
+  },
+  {
+    "es": "veinte",
+    "en": [
+      "twenty"
+    ]
+  },
+  {
+    "es": "treinta",
+    "en": [
+      "thirty"
+    ]
+  },
+  {
+    "es": "cuarenta",
+    "en": [
+      "forty"
+    ]
+  },
+  {
+    "es": "cincuenta",
+    "en": [
+      "fifty"
+    ]
+  },
+  {
+    "es": "cien",
+    "en": [
+      "one hundred"
+    ]
+  },
+  {
+    "es": "mil",
+    "en": [
+      "one thousand"
+    ]
+  },
+  {
+    "es": "millón",
+    "en": [
+      "million"
+    ]
+  },
+  {
+    "es": "rojo",
+    "en": [
+      "red"
+    ]
+  },
+  {
+    "es": "azul",
+    "en": [
+      "blue"
+    ]
+  },
+  {
+    "es": "verde",
+    "en": [
+      "green"
+    ]
+  },
+  {
+    "es": "amarillo",
+    "en": [
+      "yellow"
+    ]
+  },
+  {
+    "es": "blanco",
+    "en": [
+      "white"
+    ]
+  },
+  {
+    "es": "negro",
+    "en": [
+      "black"
+    ]
+  },
+  {
+    "es": "gris",
+    "en": [
+      "gray",
+      "grey"
+    ]
+  },
+  {
+    "es": "rosa",
+    "en": [
+      "pink",
+      "rose"
+    ]
+  },
+  {
+    "es": "naranja",
+    "en": [
+      "orange"
+    ]
+  },
+  {
+    "es": "marrón",
+    "en": [
+      "brown"
+    ]
+  },
+  {
+    "es": "morado",
+    "en": [
+      "purple"
+    ]
+  },
+  {
+    "es": "dorado",
+    "en": [
+      "golden",
+      "gold"
+    ]
+  },
+  {
+    "es": "plateado",
+    "en": [
+      "silver"
+    ]
+  },
+  {
+    "es": "perro",
+    "en": [
+      "dog"
+    ]
+  },
+  {
+    "es": "gato",
+    "en": [
+      "cat"
+    ]
+  },
+  {
+    "es": "pájaro",
+    "en": [
+      "bird"
+    ]
+  },
+  {
+    "es": "pez",
+    "en": [
+      "fish"
+    ]
+  },
+  {
+    "es": "caballo",
+    "en": [
+      "horse"
+    ]
+  },
+  {
+    "es": "vaca",
+    "en": [
+      "cow"
+    ]
+  },
+  {
+    "es": "cerdo",
+    "en": [
+      "pig"
+    ]
+  },
+  {
+    "es": "oveja",
+    "en": [
+      "sheep"
+    ]
+  },
+  {
+    "es": "gallina",
+    "en": [
+      "hen",
+      "chicken"
+    ]
+  },
+  {
+    "es": "conejo",
+    "en": [
+      "rabbit"
+    ]
+  },
+  {
+    "es": "ratón",
+    "en": [
+      "mouse"
+    ]
+  },
+  {
+    "es": "serpiente",
+    "en": [
+      "snake"
+    ]
+  },
+  {
+    "es": "oso",
+    "en": [
+      "bear"
+    ]
+  },
+  {
+    "es": "león",
+    "en": [
+      "lion"
+    ]
+  },
+  {
+    "es": "mono",
+    "en": [
+      "monkey"
+    ]
+  },
+  {
+    "es": "mariposa",
+    "en": [
+      "butterfly"
+    ]
+  },
+  {
+    "es": "tortuga",
+    "en": [
+      "turtle",
+      "tortoise"
+    ]
+  },
+  {
+    "es": "hormiga",
+    "en": [
+      "ant"
+    ]
+  },
+  {
+    "es": "mosca",
+    "en": [
+      "fly"
+    ]
+  },
+  {
+    "es": "araña",
+    "en": [
+      "spider"
+    ]
+  },
+  {
+    "es": "lobo",
+    "en": [
+      "wolf"
+    ]
+  },
+  {
+    "es": "toro",
+    "en": [
+      "bull"
+    ]
+  },
+  {
+    "es": "burro",
+    "en": [
+      "donkey"
+    ]
+  },
+  {
+    "es": "pan",
+    "en": [
+      "bread"
+    ]
+  },
+  {
+    "es": "leche",
+    "en": [
+      "milk"
+    ]
+  },
+  {
+    "es": "huevo",
+    "en": [
+      "egg"
+    ]
+  },
+  {
+    "es": "arroz",
+    "en": [
+      "rice"
+    ]
+  },
+  {
+    "es": "carne",
+    "en": [
+      "meat"
+    ]
+  },
+  {
+    "es": "pollo",
+    "en": [
+      "chicken"
+    ]
+  },
+  {
+    "es": "pescado",
+    "en": [
+      "fish"
+    ]
+  },
+  {
+    "es": "fruta",
+    "en": [
+      "fruit"
+    ]
+  },
+  {
+    "es": "manzana",
+    "en": [
+      "apple"
+    ]
+  },
+  {
+    "es": "plátano",
+    "en": [
+      "banana"
+    ]
+  },
+  {
+    "es": "uva",
+    "en": [
+      "grape"
+    ]
+  },
+  {
+    "es": "fresa",
+    "en": [
+      "strawberry"
+    ]
+  },
+  {
+    "es": "limón",
+    "en": [
+      "lemon"
+    ]
+  },
+  {
+    "es": "tomate",
+    "en": [
+      "tomato"
+    ]
+  },
+  {
+    "es": "papa",
+    "en": [
+      "potato"
+    ]
+  },
+  {
+    "es": "cebolla",
+    "en": [
+      "onion"
+    ]
+  },
+  {
+    "es": "ajo",
+    "en": [
+      "garlic"
+    ]
+  },
+  {
+    "es": "sal",
+    "en": [
+      "salt"
+    ]
+  },
+  {
+    "es": "azúcar",
+    "en": [
+      "sugar"
+    ]
+  },
+  {
+    "es": "aceite",
+    "en": [
+      "oil"
+    ]
+  },
+  {
+    "es": "mantequilla",
+    "en": [
+      "butter"
+    ]
+  },
+  {
+    "es": "queso",
+    "en": [
+      "cheese"
+    ]
+  },
+  {
+    "es": "café",
+    "en": [
+      "coffee",
+      "brown"
+    ]
+  },
+  {
+    "es": "té",
+    "en": [
+      "tea"
+    ]
+  },
+  {
+    "es": "cerveza",
+    "en": [
+      "beer"
+    ]
+  },
+  {
+    "es": "vino",
+    "en": [
+      "wine"
+    ]
+  },
+  {
+    "es": "jugo",
+    "en": [
+      "juice"
+    ]
+  },
+  {
+    "es": "sopa",
+    "en": [
+      "soup"
+    ]
+  },
+  {
+    "es": "ensalada",
+    "en": [
+      "salad"
+    ]
+  },
+  {
+    "es": "postre",
+    "en": [
+      "dessert"
+    ]
+  },
+  {
+    "es": "helado",
+    "en": [
+      "ice cream"
+    ]
+  },
+  {
+    "es": "pastel",
+    "en": [
+      "cake"
+    ]
+  },
+  {
+    "es": "galleta",
+    "en": [
+      "cookie",
+      "cracker"
+    ]
+  },
+  {
+    "es": "chocolate",
+    "en": [
+      "chocolate"
+    ]
+  },
+  {
+    "es": "pimienta",
+    "en": [
+      "pepper"
+    ]
+  },
+  {
+    "es": "verdura",
+    "en": [
+      "vegetable"
+    ]
+  },
+  {
+    "es": "zanahoria",
+    "en": [
+      "carrot"
+    ]
+  },
+  {
+    "es": "lechuga",
+    "en": [
+      "lettuce"
+    ]
+  },
+  {
+    "es": "brazo",
+    "en": [
+      "arm"
+    ]
+  },
+  {
+    "es": "pierna",
+    "en": [
+      "leg"
+    ]
+  },
+  {
+    "es": "dedo",
+    "en": [
+      "finger",
+      "toe"
+    ]
+  },
+  {
+    "es": "boca",
+    "en": [
+      "mouth"
+    ]
+  },
+  {
+    "es": "nariz",
+    "en": [
+      "nose"
+    ]
+  },
+  {
+    "es": "oreja",
+    "en": [
+      "ear"
+    ]
+  },
+  {
+    "es": "pelo",
+    "en": [
+      "hair"
+    ]
+  },
+  {
+    "es": "cara",
+    "en": [
+      "face"
+    ]
+  },
+  {
+    "es": "espalda",
+    "en": [
+      "back"
+    ]
+  },
+  {
+    "es": "pecho",
+    "en": [
+      "chest"
+    ]
+  },
+  {
+    "es": "estómago",
+    "en": [
+      "stomach"
+    ]
+  },
+  {
+    "es": "corazón",
+    "en": [
+      "heart"
+    ]
+  },
+  {
+    "es": "sangre",
+    "en": [
+      "blood"
+    ]
+  },
+  {
+    "es": "hueso",
+    "en": [
+      "bone"
+    ]
+  },
+  {
+    "es": "piel",
+    "en": [
+      "skin"
+    ]
+  },
+  {
+    "es": "diente",
+    "en": [
+      "tooth"
+    ]
+  },
+  {
+    "es": "lengua",
+    "en": [
+      "tongue",
+      "language"
+    ]
+  },
+  {
+    "es": "cuello",
+    "en": [
+      "neck"
+    ]
+  },
+  {
+    "es": "hombro",
+    "en": [
+      "shoulder"
+    ]
+  },
+  {
+    "es": "rodilla",
+    "en": [
+      "knee"
+    ]
+  },
+  {
+    "es": "tobillo",
+    "en": [
+      "ankle"
+    ]
+  },
+  {
+    "es": "muñeca",
+    "en": [
+      "wrist",
+      "doll"
+    ]
+  },
+  {
+    "es": "codo",
+    "en": [
+      "elbow"
+    ]
+  },
+  {
+    "es": "uña",
+    "en": [
+      "nail",
+      "fingernail"
+    ]
+  },
+  {
+    "es": "labio",
+    "en": [
+      "lip"
+    ]
+  },
+  {
+    "es": "cerebro",
+    "en": [
+      "brain"
+    ]
+  },
+  {
+    "es": "pulmón",
+    "en": [
+      "lung"
+    ]
+  },
+  {
+    "es": "camisa",
+    "en": [
+      "shirt"
+    ]
+  },
+  {
+    "es": "pantalón",
+    "en": [
+      "pants",
+      "trousers"
+    ]
+  },
+  {
+    "es": "zapato",
+    "en": [
+      "shoe"
+    ]
+  },
+  {
+    "es": "vestido",
+    "en": [
+      "dress"
+    ]
+  },
+  {
+    "es": "falda",
+    "en": [
+      "skirt"
+    ]
+  },
+  {
+    "es": "abrigo",
+    "en": [
+      "coat"
+    ]
+  },
+  {
+    "es": "chaqueta",
+    "en": [
+      "jacket"
+    ]
+  },
+  {
+    "es": "sombrero",
+    "en": [
+      "hat"
+    ]
+  },
+  {
+    "es": "gorra",
+    "en": [
+      "cap"
+    ]
+  },
+  {
+    "es": "calcetín",
+    "en": [
+      "sock"
+    ]
+  },
+  {
+    "es": "bufanda",
+    "en": [
+      "scarf"
+    ]
+  },
+  {
+    "es": "guante",
+    "en": [
+      "glove"
+    ]
+  },
+  {
+    "es": "cinturón",
+    "en": [
+      "belt"
+    ]
+  },
+  {
+    "es": "bolsillo",
+    "en": [
+      "pocket"
+    ]
+  },
+  {
+    "es": "botón",
+    "en": [
+      "button"
+    ]
+  },
+  {
+    "es": "tela",
+    "en": [
+      "fabric",
+      "cloth"
+    ]
+  },
+  {
+    "es": "ropa",
+    "en": [
+      "clothes",
+      "clothing"
+    ]
+  },
+  {
+    "es": "camiseta",
+    "en": [
+      "t-shirt"
+    ]
+  },
+  {
+    "es": "bota",
+    "en": [
+      "boot"
+    ]
+  },
+  {
+    "es": "corbata",
+    "en": [
+      "tie",
+      "necktie"
+    ]
+  },
+  {
+    "es": "traje",
+    "en": [
+      "suit"
+    ]
+  },
+  {
+    "es": "bolso",
+    "en": [
+      "bag",
+      "purse"
+    ]
+  },
+  {
+    "es": "anillo",
+    "en": [
+      "ring"
+    ]
+  },
+  {
+    "es": "reloj",
+    "en": [
+      "watch",
+      "clock"
+    ]
+  },
+  {
+    "es": "gafas",
+    "en": [
+      "glasses"
+    ]
+  },
+  {
+    "es": "paraguas",
+    "en": [
+      "umbrella"
+    ]
+  },
+  {
+    "es": "llave",
+    "en": [
+      "key"
+    ]
+  },
+  {
+    "es": "teléfono",
+    "en": [
+      "telephone",
+      "phone"
+    ]
+  },
+  {
+    "es": "computadora",
+    "en": [
+      "computer"
+    ]
+  },
+  {
+    "es": "televisión",
+    "en": [
+      "television",
+      "TV"
+    ]
+  },
+  {
+    "es": "radio",
+    "en": [
+      "radio"
+    ]
+  },
+  {
+    "es": "cámara",
+    "en": [
+      "camera"
+    ]
+  },
+  {
+    "es": "cocina",
+    "en": [
+      "kitchen"
+    ]
+  },
+  {
+    "es": "baño",
+    "en": [
+      "bathroom"
+    ]
+  },
+  {
+    "es": "habitación",
+    "en": [
+      "room",
+      "bedroom"
+    ]
+  },
+  {
+    "es": "techo",
+    "en": [
+      "roof",
+      "ceiling"
+    ]
+  },
+  {
+    "es": "suelo",
+    "en": [
+      "floor",
+      "ground"
+    ]
+  },
+  {
+    "es": "pared",
+    "en": [
+      "wall"
+    ]
+  },
+  {
+    "es": "escalera",
+    "en": [
+      "stairs",
+      "ladder"
+    ]
+  },
+  {
+    "es": "jardín",
+    "en": [
+      "garden"
+    ]
+  },
+  {
+    "es": "espejo",
+    "en": [
+      "mirror"
+    ]
+  },
+  {
+    "es": "lámpara",
+    "en": [
+      "lamp"
+    ]
+  },
+  {
+    "es": "sofá",
+    "en": [
+      "sofa",
+      "couch"
+    ]
+  },
+  {
+    "es": "alfombra",
+    "en": [
+      "carpet",
+      "rug"
+    ]
+  },
+  {
+    "es": "cortina",
+    "en": [
+      "curtain"
+    ]
+  },
+  {
+    "es": "almohada",
+    "en": [
+      "pillow"
+    ]
+  },
+  {
+    "es": "manta",
+    "en": [
+      "blanket"
+    ]
+  },
+  {
+    "es": "toalla",
+    "en": [
+      "towel"
+    ]
+  },
+  {
+    "es": "jabón",
+    "en": [
+      "soap"
+    ]
+  },
+  {
+    "es": "cuchillo",
+    "en": [
+      "knife"
+    ]
+  },
+  {
+    "es": "tenedor",
+    "en": [
+      "fork"
+    ]
+  },
+  {
+    "es": "cuchara",
+    "en": [
+      "spoon"
+    ]
+  },
+  {
+    "es": "plato",
+    "en": [
+      "plate",
+      "dish"
+    ]
+  },
+  {
+    "es": "vaso",
+    "en": [
+      "glass"
+    ]
+  },
+  {
+    "es": "taza",
+    "en": [
+      "cup",
+      "mug"
+    ]
+  },
+  {
+    "es": "botella",
+    "en": [
+      "bottle"
+    ]
+  },
+  {
+    "es": "olla",
+    "en": [
+      "pot"
+    ]
+  },
+  {
+    "es": "sartén",
+    "en": [
+      "frying pan",
+      "pan"
+    ]
+  },
+  {
+    "es": "nevera",
+    "en": [
+      "refrigerator",
+      "fridge"
+    ]
+  },
+  {
+    "es": "horno",
+    "en": [
+      "oven"
+    ]
+  },
+  {
+    "es": "médico",
+    "en": [
+      "doctor"
+    ]
+  },
+  {
+    "es": "profesor",
+    "en": [
+      "teacher",
+      "professor"
+    ]
+  },
+  {
+    "es": "abogado",
+    "en": [
+      "lawyer"
+    ]
+  },
+  {
+    "es": "policía",
+    "en": [
+      "police",
+      "police officer"
+    ]
+  },
+  {
+    "es": "enfermero",
+    "en": [
+      "nurse"
+    ]
+  },
+  {
+    "es": "ingeniero",
+    "en": [
+      "engineer"
+    ]
+  },
+  {
+    "es": "arquitecto",
+    "en": [
+      "architect"
+    ]
+  },
+  {
+    "es": "bombero",
+    "en": [
+      "firefighter"
+    ]
+  },
+  {
+    "es": "cocinero",
+    "en": [
+      "cook",
+      "chef"
+    ]
+  },
+  {
+    "es": "soldado",
+    "en": [
+      "soldier"
+    ]
+  },
+  {
+    "es": "escritor",
+    "en": [
+      "writer"
+    ]
+  },
+  {
+    "es": "artista",
+    "en": [
+      "artist"
+    ]
+  },
+  {
+    "es": "músico",
+    "en": [
+      "musician"
+    ]
+  },
+  {
+    "es": "cantante",
+    "en": [
+      "singer"
+    ]
+  },
+  {
+    "es": "actor",
+    "en": [
+      "actor"
+    ]
+  },
+  {
+    "es": "periodista",
+    "en": [
+      "journalist"
+    ]
+  },
+  {
+    "es": "conductor",
+    "en": [
+      "driver"
+    ]
+  },
+  {
+    "es": "juez",
+    "en": [
+      "judge"
+    ]
+  },
+  {
+    "es": "piloto",
+    "en": [
+      "pilot"
+    ]
+  },
+  {
+    "es": "agricultor",
+    "en": [
+      "farmer"
+    ]
+  },
+  {
+    "es": "carpintero",
+    "en": [
+      "carpenter"
+    ]
+  },
+  {
+    "es": "mecánico",
+    "en": [
+      "mechanic"
+    ]
+  },
+  {
+    "es": "vendedor",
+    "en": [
+      "seller",
+      "salesman"
+    ]
+  },
+  {
+    "es": "jefe",
+    "en": [
+      "boss",
+      "chief"
+    ]
+  },
+  {
+    "es": "secretario",
+    "en": [
+      "secretary"
+    ]
+  },
+  {
+    "es": "dentista",
+    "en": [
+      "dentist"
+    ]
+  },
+  {
+    "es": "amor",
+    "en": [
+      "love"
+    ]
+  },
+  {
+    "es": "miedo",
+    "en": [
+      "fear"
+    ]
+  },
+  {
+    "es": "alegría",
+    "en": [
+      "joy",
+      "happiness"
+    ]
+  },
+  {
+    "es": "tristeza",
+    "en": [
+      "sadness"
+    ]
+  },
+  {
+    "es": "enojo",
+    "en": [
+      "anger"
+    ]
+  },
+  {
+    "es": "sorpresa",
+    "en": [
+      "surprise"
+    ]
+  },
+  {
+    "es": "esperanza",
+    "en": [
+      "hope"
+    ]
+  },
+  {
+    "es": "dolor",
+    "en": [
+      "pain"
+    ]
+  },
+  {
+    "es": "paz",
+    "en": [
+      "peace"
+    ]
+  },
+  {
+    "es": "libertad",
+    "en": [
+      "freedom",
+      "liberty"
+    ]
+  },
+  {
+    "es": "suerte",
+    "en": [
+      "luck"
+    ]
+  },
+  {
+    "es": "sueño",
+    "en": [
+      "dream",
+      "sleep"
+    ]
+  },
+  {
+    "es": "deseo",
+    "en": [
+      "wish",
+      "desire"
+    ]
+  },
+  {
+    "es": "orgullo",
+    "en": [
+      "pride"
+    ]
+  },
+  {
+    "es": "vergüenza",
+    "en": [
+      "shame",
+      "embarrassment"
+    ]
+  },
+  {
+    "es": "confianza",
+    "en": [
+      "trust",
+      "confidence"
+    ]
+  },
+  {
+    "es": "odio",
+    "en": [
+      "hate",
+      "hatred"
+    ]
+  },
+  {
+    "es": "celos",
+    "en": [
+      "jealousy"
+    ]
+  },
+  {
+    "es": "soledad",
+    "en": [
+      "loneliness"
+    ]
+  },
+  {
+    "es": "valor",
+    "en": [
+      "courage",
+      "value"
+    ]
+  },
+  {
+    "es": "lunes",
+    "en": [
+      "Monday"
+    ]
+  },
+  {
+    "es": "martes",
+    "en": [
+      "Tuesday"
+    ]
+  },
+  {
+    "es": "miércoles",
+    "en": [
+      "Wednesday"
+    ]
+  },
+  {
+    "es": "jueves",
+    "en": [
+      "Thursday"
+    ]
+  },
+  {
+    "es": "viernes",
+    "en": [
+      "Friday"
+    ]
+  },
+  {
+    "es": "sábado",
+    "en": [
+      "Saturday"
+    ]
+  },
+  {
+    "es": "domingo",
+    "en": [
+      "Sunday"
+    ]
+  },
+  {
+    "es": "enero",
+    "en": [
+      "January"
+    ]
+  },
+  {
+    "es": "febrero",
+    "en": [
+      "February"
+    ]
+  },
+  {
+    "es": "marzo",
+    "en": [
+      "March"
+    ]
+  },
+  {
+    "es": "abril",
+    "en": [
+      "April"
+    ]
+  },
+  {
+    "es": "mayo",
+    "en": [
+      "May"
+    ]
+  },
+  {
+    "es": "junio",
+    "en": [
+      "June"
+    ]
+  },
+  {
+    "es": "julio",
+    "en": [
+      "July"
+    ]
+  },
+  {
+    "es": "agosto",
+    "en": [
+      "August"
+    ]
+  },
+  {
+    "es": "septiembre",
+    "en": [
+      "September"
+    ]
+  },
+  {
+    "es": "octubre",
+    "en": [
+      "October"
+    ]
+  },
+  {
+    "es": "noviembre",
+    "en": [
+      "November"
+    ]
+  },
+  {
+    "es": "diciembre",
+    "en": [
+      "December"
+    ]
+  },
+  {
+    "es": "primavera",
+    "en": [
+      "spring"
+    ]
+  },
+  {
+    "es": "verano",
+    "en": [
+      "summer"
+    ]
+  },
+  {
+    "es": "otoño",
+    "en": [
+      "autumn",
+      "fall"
+    ]
+  },
+  {
+    "es": "invierno",
+    "en": [
+      "winter"
+    ]
+  },
+  {
+    "es": "norte",
+    "en": [
+      "north"
+    ]
+  },
+  {
+    "es": "sur",
+    "en": [
+      "south"
+    ]
+  },
+  {
+    "es": "oeste",
+    "en": [
+      "west"
+    ]
+  },
+  {
+    "es": "empresa",
+    "en": [
+      "company",
+      "business"
+    ]
+  },
+  {
+    "es": "educación",
+    "en": [
+      "education"
+    ]
+  },
+  {
+    "es": "salud",
+    "en": [
+      "health"
+    ]
+  },
+  {
+    "es": "cultura",
+    "en": [
+      "culture"
+    ]
+  },
+  {
+    "es": "música",
+    "en": [
+      "music"
+    ]
+  },
+  {
+    "es": "película",
+    "en": [
+      "movie",
+      "film"
+    ]
+  },
+  {
+    "es": "deporte",
+    "en": [
+      "sport"
+    ]
+  },
+  {
+    "es": "periódico",
+    "en": [
+      "newspaper"
+    ]
+  },
+  {
+    "es": "revista",
+    "en": [
+      "magazine"
+    ]
+  },
+  {
+    "es": "carta",
+    "en": [
+      "letter",
+      "card"
+    ]
+  },
+  {
+    "es": "mensaje",
+    "en": [
+      "message"
+    ]
+  },
+  {
+    "es": "noticia",
+    "en": [
+      "news"
+    ]
+  },
+  {
+    "es": "canción",
+    "en": [
+      "song"
+    ]
+  },
+  {
+    "es": "foto",
+    "en": [
+      "photo",
+      "picture"
+    ]
+  },
+  {
+    "es": "viaje",
+    "en": [
+      "trip",
+      "journey"
+    ]
+  },
+  {
+    "es": "hotel",
+    "en": [
+      "hotel"
+    ]
+  },
+  {
+    "es": "aeropuerto",
+    "en": [
+      "airport"
+    ]
+  },
+  {
+    "es": "estación",
+    "en": [
+      "station",
+      "season"
+    ]
+  },
+  {
+    "es": "banco",
+    "en": [
+      "bank",
+      "bench"
+    ]
+  },
+  {
+    "es": "tienda",
+    "en": [
+      "store",
+      "shop"
+    ]
+  },
+  {
+    "es": "restaurante",
+    "en": [
+      "restaurant"
+    ]
+  },
+  {
+    "es": "hospital",
+    "en": [
+      "hospital"
+    ]
+  },
+  {
+    "es": "oficina",
+    "en": [
+      "office"
+    ]
+  },
+  {
+    "es": "cine",
+    "en": [
+      "cinema",
+      "movies"
+    ]
+  },
+  {
+    "es": "museo",
+    "en": [
+      "museum"
+    ]
+  },
+  {
+    "es": "parque",
+    "en": [
+      "park"
+    ]
+  },
+  {
+    "es": "biblioteca",
+    "en": [
+      "library"
+    ]
+  },
+  {
+    "es": "farmacia",
+    "en": [
+      "pharmacy"
+    ]
+  },
+  {
+    "es": "supermercado",
+    "en": [
+      "supermarket"
+    ]
+  },
+  {
+    "es": "plaza",
+    "en": [
+      "square",
+      "plaza"
+    ]
+  },
+  {
+    "es": "puente",
+    "en": [
+      "bridge"
+    ]
+  },
+  {
+    "es": "torre",
+    "en": [
+      "tower"
+    ]
+  },
+  {
+    "es": "edificio",
+    "en": [
+      "building"
+    ]
+  },
+  {
+    "es": "piso",
+    "en": [
+      "floor",
+      "apartment"
+    ]
+  },
+  {
+    "es": "barrio",
+    "en": [
+      "neighborhood"
+    ]
+  },
+  {
+    "es": "avión",
+    "en": [
+      "airplane",
+      "plane"
+    ]
+  },
+  {
+    "es": "tren",
+    "en": [
+      "train"
+    ]
+  },
+  {
+    "es": "autobús",
+    "en": [
+      "bus"
+    ]
+  },
+  {
+    "es": "bicicleta",
+    "en": [
+      "bicycle",
+      "bike"
+    ]
+  },
+  {
+    "es": "barco",
+    "en": [
+      "boat",
+      "ship"
+    ]
+  },
+  {
+    "es": "moto",
+    "en": [
+      "motorcycle"
+    ]
+  },
+  {
+    "es": "rueda",
+    "en": [
+      "wheel"
+    ]
+  },
+  {
+    "es": "gasolina",
+    "en": [
+      "gasoline",
+      "gas"
+    ]
+  },
+  {
+    "es": "precio",
+    "en": [
+      "price"
+    ]
+  },
+  {
+    "es": "regalo",
+    "en": [
+      "gift",
+      "present"
+    ]
+  },
+  {
+    "es": "fiesta",
+    "en": [
+      "party",
+      "holiday"
+    ]
+  },
+  {
+    "es": "boda",
+    "en": [
+      "wedding"
+    ]
+  },
+  {
+    "es": "cumpleaños",
+    "en": [
+      "birthday"
+    ]
+  },
+  {
+    "es": "vacaciones",
+    "en": [
+      "vacation",
+      "holidays"
+    ]
+  },
+  {
+    "es": "navidad",
+    "en": [
+      "Christmas"
+    ]
+  },
+  {
+    "es": "dios",
+    "en": [
+      "god"
+    ]
+  },
+  {
+    "es": "rey",
+    "en": [
+      "king"
+    ]
+  },
+  {
+    "es": "reina",
+    "en": [
+      "queen"
+    ]
+  },
+  {
+    "es": "presidente",
+    "en": [
+      "president"
+    ]
+  },
+  {
+    "es": "ejército",
+    "en": [
+      "army"
+    ]
+  },
+  {
+    "es": "siglo",
+    "en": [
+      "century"
+    ]
+  },
+  {
+    "es": "sociedad",
+    "en": [
+      "society"
+    ]
+  },
+  {
+    "es": "política",
+    "en": [
+      "politics",
+      "policy"
+    ]
+  },
+  {
+    "es": "economía",
+    "en": [
+      "economy"
+    ]
+  },
+  {
+    "es": "ciencia",
+    "en": [
+      "science"
+    ]
+  },
+  {
+    "es": "tecnología",
+    "en": [
+      "technology"
+    ]
+  },
+  {
+    "es": "internet",
+    "en": [
+      "internet"
+    ]
+  },
+  {
+    "es": "página",
+    "en": [
+      "page"
+    ]
+  },
+  {
+    "es": "información",
+    "en": [
+      "information"
+    ]
+  },
+  {
+    "es": "proyecto",
+    "en": [
+      "project"
+    ]
+  },
+  {
+    "es": "resultado",
+    "en": [
+      "result"
+    ]
+  },
+  {
+    "es": "proceso",
+    "en": [
+      "process"
+    ]
+  },
+  {
+    "es": "acción",
+    "en": [
+      "action"
+    ]
+  },
+  {
+    "es": "decisión",
+    "en": [
+      "decision"
+    ]
+  },
+  {
+    "es": "opinión",
+    "en": [
+      "opinion"
+    ]
+  },
+  {
+    "es": "objetivo",
+    "en": [
+      "objective",
+      "goal"
+    ]
+  },
+  {
+    "es": "éxito",
+    "en": [
+      "success"
+    ]
+  },
+  {
+    "es": "error",
+    "en": [
+      "error",
+      "mistake"
+    ]
+  },
+  {
+    "es": "causa",
+    "en": [
+      "cause"
+    ]
+  },
+  {
+    "es": "efecto",
+    "en": [
+      "effect"
+    ]
+  },
+  {
+    "es": "cambio",
+    "en": [
+      "change"
+    ]
+  },
+  {
+    "es": "desarrollo",
+    "en": [
+      "development"
+    ]
+  },
+  {
+    "es": "servicio",
+    "en": [
+      "service"
+    ]
+  },
+  {
+    "es": "experiencia",
+    "en": [
+      "experience"
+    ]
+  },
+  {
+    "es": "interés",
+    "en": [
+      "interest"
+    ]
+  },
+  {
+    "es": "importancia",
+    "en": [
+      "importance"
+    ]
+  },
+  {
+    "es": "zona",
+    "en": [
+      "zone",
+      "area"
+    ]
+  },
+  {
+    "es": "región",
+    "en": [
+      "region"
+    ]
+  },
+  {
+    "es": "área",
+    "en": [
+      "area"
+    ]
+  },
+  {
+    "es": "espacio",
+    "en": [
+      "space"
+    ]
+  },
+  {
+    "es": "tamaño",
+    "en": [
+      "size"
+    ]
+  },
+  {
+    "es": "peso",
+    "en": [
+      "weight"
+    ]
+  },
+  {
+    "es": "color",
+    "en": [
+      "color"
+    ]
+  },
+  {
+    "es": "sonido",
+    "en": [
+      "sound"
+    ]
+  },
+  {
+    "es": "ruido",
+    "en": [
+      "noise"
+    ]
+  },
+  {
+    "es": "olor",
+    "en": [
+      "smell"
+    ]
+  },
+  {
+    "es": "sabor",
+    "en": [
+      "taste",
+      "flavor"
+    ]
+  },
+  {
+    "es": "imagen",
+    "en": [
+      "image",
+      "picture"
+    ]
+  },
+  {
+    "es": "señal",
+    "en": [
+      "sign",
+      "signal"
+    ]
+  },
+  {
+    "es": "línea",
+    "en": [
+      "line"
+    ]
+  },
+  {
+    "es": "dirección",
+    "en": [
+      "direction",
+      "address"
+    ]
+  },
+  {
+    "es": "entrada",
+    "en": [
+      "entrance",
+      "entry",
+      "ticket"
+    ]
+  },
+  {
+    "es": "salida",
+    "en": [
+      "exit",
+      "departure"
+    ]
+  },
+  {
+    "es": "principio",
+    "en": [
+      "beginning",
+      "principle"
+    ]
+  },
+  {
+    "es": "final",
+    "en": [
+      "end",
+      "final"
+    ]
+  },
+  {
+    "es": "serie",
+    "en": [
+      "series"
+    ]
+  },
+  {
+    "es": "orden",
+    "en": [
+      "order"
+    ]
+  },
+  {
+    "es": "control",
+    "en": [
+      "control"
+    ]
+  },
+  {
+    "es": "seguridad",
+    "en": [
+      "safety",
+      "security"
+    ]
+  },
+  {
+    "es": "justicia",
+    "en": [
+      "justice"
+    ]
+  },
+  {
+    "es": "necesidad",
+    "en": [
+      "need",
+      "necessity"
+    ]
+  },
+  {
+    "es": "realidad",
+    "en": [
+      "reality"
+    ]
+  },
+  {
+    "es": "actividad",
+    "en": [
+      "activity"
+    ]
+  },
+  {
+    "es": "oportunidad",
+    "en": [
+      "opportunity"
+    ]
+  },
+  {
+    "es": "capacidad",
+    "en": [
+      "capacity",
+      "ability"
+    ]
+  },
+  {
+    "es": "calidad",
+    "en": [
+      "quality"
+    ]
+  },
+  {
+    "es": "cantidad",
+    "en": [
+      "quantity",
+      "amount"
+    ]
+  },
+  {
+    "es": "diferencia",
+    "en": [
+      "difference"
+    ]
+  },
+  {
+    "es": "distancia",
+    "en": [
+      "distance"
+    ]
+  },
+  {
+    "es": "presencia",
+    "en": [
+      "presence"
+    ]
+  },
+  {
+    "es": "atención",
+    "en": [
+      "attention"
+    ]
+  },
+  {
+    "es": "condición",
+    "en": [
+      "condition"
+    ]
+  },
+  {
+    "es": "posición",
+    "en": [
+      "position"
+    ]
+  },
+  {
+    "es": "función",
+    "en": [
+      "function"
+    ]
+  },
+  {
+    "es": "producción",
+    "en": [
+      "production"
+    ]
+  },
+  {
+    "es": "población",
+    "en": [
+      "population"
+    ]
+  },
+  {
+    "es": "comunicación",
+    "en": [
+      "communication"
+    ]
+  },
+  {
+    "es": "elección",
+    "en": [
+      "election",
+      "choice"
+    ]
+  },
+  {
+    "es": "organización",
+    "en": [
+      "organization"
+    ]
+  },
+  {
+    "es": "memoria",
+    "en": [
+      "memory"
+    ]
+  },
+  {
+    "es": "naturaleza",
+    "en": [
+      "nature"
+    ]
+  },
+  {
+    "es": "energía",
+    "en": [
+      "energy"
+    ]
+  },
+  {
+    "es": "material",
+    "en": [
+      "material"
+    ]
+  },
+  {
+    "es": "papel",
+    "en": [
+      "paper",
+      "role"
+    ]
+  },
+  {
+    "es": "bolígrafo",
+    "en": [
+      "pen"
+    ]
+  },
+  {
+    "es": "lápiz",
+    "en": [
+      "pencil"
+    ]
+  },
+  {
+    "es": "cuaderno",
+    "en": [
+      "notebook"
+    ]
+  },
+  {
+    "es": "mapa",
+    "en": [
+      "map"
+    ]
+  },
+  {
+    "es": "bandera",
+    "en": [
+      "flag"
+    ]
+  },
+  {
+    "es": "cruz",
+    "en": [
+      "cross"
+    ]
+  },
+  {
+    "es": "círculo",
+    "en": [
+      "circle"
+    ]
+  },
+  {
+    "es": "cuadrado",
+    "en": [
+      "square"
+    ]
+  },
+  {
+    "es": "triángulo",
+    "en": [
+      "triangle"
+    ]
+  },
+  {
+    "es": "máquina",
+    "en": [
+      "machine"
+    ]
+  },
+  {
+    "es": "herramienta",
+    "en": [
+      "tool"
+    ]
+  },
+  {
+    "es": "cadena",
+    "en": [
+      "chain",
+      "channel"
+    ]
+  },
+  {
+    "es": "cuerda",
+    "en": [
+      "rope",
+      "string"
+    ]
+  },
+  {
+    "es": "red",
+    "en": [
+      "net",
+      "network"
+    ]
+  },
+  {
+    "es": "bolsa",
+    "en": [
+      "bag"
+    ]
+  },
+  {
+    "es": "caja",
+    "en": [
+      "box"
+    ]
+  },
+  {
+    "es": "paquete",
+    "en": [
+      "package"
+    ]
+  },
+  {
+    "es": "basura",
+    "en": [
+      "trash",
+      "garbage"
+    ]
+  },
+  {
+    "es": "medicina",
+    "en": [
+      "medicine"
+    ]
+  },
+  {
+    "es": "enfermedad",
+    "en": [
+      "disease",
+      "illness"
+    ]
+  },
+  {
+    "es": "fiebre",
+    "en": [
+      "fever"
+    ]
+  },
+  {
+    "es": "herida",
+    "en": [
+      "wound",
+      "injury"
+    ]
+  },
+  {
+    "es": "cura",
+    "en": [
+      "cure"
+    ]
+  },
+  {
+    "es": "receta",
+    "en": [
+      "recipe",
+      "prescription"
+    ]
+  },
+  {
+    "es": "pastilla",
+    "en": [
+      "pill",
+      "tablet"
+    ]
+  },
+  {
+    "es": "lección",
+    "en": [
+      "lesson"
+    ]
+  },
+  {
+    "es": "examen",
+    "en": [
+      "exam",
+      "test"
+    ]
+  },
+  {
+    "es": "nota",
+    "en": [
+      "note",
+      "grade"
+    ]
+  },
+  {
+    "es": "tarea",
+    "en": [
+      "homework",
+      "task"
+    ]
+  },
+  {
+    "es": "equipo",
+    "en": [
+      "team",
+      "equipment"
+    ]
+  },
+  {
+    "es": "máximo",
+    "en": [
+      "maximum"
+    ]
+  },
+  {
+    "es": "mínimo",
+    "en": [
+      "minimum"
+    ]
+  },
+  {
+    "es": "total",
+    "en": [
+      "total"
+    ]
+  },
+  {
+    "es": "general",
+    "en": [
+      "general"
+    ]
+  },
+  {
+    "es": "especial",
+    "en": [
+      "special"
+    ]
+  },
+  {
+    "es": "particular",
+    "en": [
+      "particular"
+    ]
+  },
+  {
+    "es": "natural",
+    "en": [
+      "natural"
+    ]
+  },
+  {
+    "es": "normal",
+    "en": [
+      "normal"
+    ]
+  },
+  {
+    "es": "social",
+    "en": [
+      "social"
+    ]
+  },
+  {
+    "es": "político",
+    "en": [
+      "political"
+    ]
+  },
+  {
+    "es": "público",
+    "en": [
+      "public"
+    ]
+  },
+  {
+    "es": "privado",
+    "en": [
+      "private"
+    ]
+  },
+  {
+    "es": "económico",
+    "en": [
+      "economic"
+    ]
+  },
+  {
+    "es": "internacional",
+    "en": [
+      "international"
+    ]
+  },
+  {
+    "es": "nacional",
+    "en": [
+      "national"
+    ]
+  },
+  {
+    "es": "local",
+    "en": [
+      "local"
+    ]
+  },
+  {
+    "es": "militar",
+    "en": [
+      "military"
+    ]
+  },
+  {
+    "es": "humano",
+    "en": [
+      "human"
+    ]
+  },
+  {
+    "es": "real",
+    "en": [
+      "real",
+      "royal"
+    ]
+  },
+  {
+    "es": "actual",
+    "en": [
+      "current",
+      "present"
+    ]
+  },
+  {
+    "es": "popular",
+    "en": [
+      "popular"
+    ]
+  },
+  {
+    "es": "común",
+    "en": [
+      "common"
+    ]
+  },
+  {
+    "es": "principal",
+    "en": [
+      "main",
+      "principal"
+    ]
+  },
+  {
+    "es": "mayor",
+    "en": [
+      "bigger",
+      "older",
+      "major"
+    ]
+  },
+  {
+    "es": "menor",
+    "en": [
+      "smaller",
+      "younger",
+      "minor"
+    ]
+  },
+  {
+    "es": "interior",
+    "en": [
+      "interior",
+      "inner"
+    ]
+  },
+  {
+    "es": "exterior",
+    "en": [
+      "exterior",
+      "outer"
+    ]
+  },
+  {
+    "es": "superior",
+    "en": [
+      "superior",
+      "upper"
+    ]
+  },
+  {
+    "es": "inferior",
+    "en": [
+      "inferior",
+      "lower"
+    ]
+  },
+  {
+    "es": "central",
+    "en": [
+      "central"
+    ]
+  },
+  {
+    "es": "personal",
+    "en": [
+      "personal"
+    ]
+  },
+  {
+    "es": "profesional",
+    "en": [
+      "professional"
+    ]
+  },
+  {
+    "es": "oficial",
+    "en": [
+      "official"
+    ]
+  },
+  {
+    "es": "religioso",
+    "en": [
+      "religious"
+    ]
+  },
+  {
+    "es": "científico",
+    "en": [
+      "scientific",
+      "scientist"
+    ]
+  },
+  {
+    "es": "europeo",
+    "en": [
+      "European"
+    ]
+  },
+  {
+    "es": "español",
+    "en": [
+      "Spanish"
+    ]
+  },
+  {
+    "es": "moderno",
+    "en": [
+      "modern"
+    ]
+  },
+  {
+    "es": "antiguo",
+    "en": [
+      "old",
+      "ancient"
+    ]
+  },
+  {
+    "es": "junto",
+    "en": [
+      "together",
+      "next to"
+    ]
+  },
+  {
+    "es": "presente",
+    "en": [
+      "present"
+    ]
+  },
+  {
+    "es": "futuro",
+    "en": [
+      "future"
+    ]
+  },
+  {
+    "es": "pasado",
+    "en": [
+      "past"
+    ]
+  },
+  {
+    "es": "reciente",
+    "en": [
+      "recent"
+    ]
+  },
+  {
+    "es": "enorme",
+    "en": [
+      "enormous",
+      "huge"
+    ]
+  },
+  {
+    "es": "perfecto",
+    "en": [
+      "perfect"
+    ]
+  },
+  {
+    "es": "terrible",
+    "en": [
+      "terrible"
+    ]
+  },
+  {
+    "es": "increíble",
+    "en": [
+      "incredible",
+      "unbelievable"
+    ]
+  },
+  {
+    "es": "fantástico",
+    "en": [
+      "fantastic"
+    ]
+  },
+  {
+    "es": "maravilloso",
+    "en": [
+      "wonderful",
+      "marvelous"
+    ]
+  },
+  {
+    "es": "favorito",
+    "en": [
+      "favorite"
+    ]
+  },
+  {
+    "es": "famoso",
+    "en": [
+      "famous"
+    ]
+  },
+  {
+    "es": "extraño",
+    "en": [
+      "strange",
+      "weird"
+    ]
+  },
+  {
+    "es": "simpático",
+    "en": [
+      "nice",
+      "friendly"
+    ]
+  },
+  {
+    "es": "amable",
+    "en": [
+      "kind",
+      "friendly"
+    ]
+  },
+  {
+    "es": "responsable",
+    "en": [
+      "responsible"
+    ]
+  },
+  {
+    "es": "inteligente",
+    "en": [
+      "intelligent",
+      "smart"
+    ]
+  },
+  {
+    "es": "tonto",
+    "en": [
+      "stupid",
+      "silly"
+    ]
+  },
+  {
+    "es": "valiente",
+    "en": [
+      "brave"
+    ]
+  },
+  {
+    "es": "generoso",
+    "en": [
+      "generous"
+    ]
+  },
+  {
+    "es": "honesto",
+    "en": [
+      "honest"
+    ]
+  },
+  {
+    "es": "curioso",
+    "en": [
+      "curious"
+    ]
+  },
+  {
+    "es": "nervioso",
+    "en": [
+      "nervous"
+    ]
+  },
+  {
+    "es": "celoso",
+    "en": [
+      "jealous"
+    ]
+  },
+  {
+    "es": "orgulloso",
+    "en": [
+      "proud"
+    ]
+  },
+  {
+    "es": "hambriento",
+    "en": [
+      "hungry"
+    ]
+  },
+  {
+    "es": "sediento",
+    "en": [
+      "thirsty"
+    ]
+  },
+  {
+    "es": "embarazada",
+    "en": [
+      "pregnant"
+    ]
+  },
+  {
+    "es": "casado",
+    "en": [
+      "married"
+    ]
+  },
+  {
+    "es": "soltero",
+    "en": [
+      "single"
+    ]
+  },
+  {
+    "es": "desnudo",
+    "en": [
+      "naked"
+    ]
+  },
+  {
+    "es": "exacto",
+    "en": [
+      "exact"
+    ]
+  },
+  {
+    "es": "silencio",
+    "en": [
+      "silence"
+    ]
+  },
+  {
+    "es": "sentido",
+    "en": [
+      "sense",
+      "meaning"
+    ]
+  },
+  {
+    "es": "modo",
+    "en": [
+      "way",
+      "mode"
+    ]
+  },
+  {
+    "es": "cuestión",
+    "en": [
+      "question",
+      "issue"
+    ]
+  },
+  {
+    "es": "aspecto",
+    "en": [
+      "aspect"
+    ]
+  },
+  {
+    "es": "asunto",
+    "en": [
+      "matter",
+      "issue"
+    ]
+  },
+  {
+    "es": "tema",
+    "en": [
+      "topic",
+      "theme"
+    ]
+  },
+  {
+    "es": "detalle",
+    "en": [
+      "detail"
+    ]
+  },
+  {
+    "es": "dato",
+    "en": [
+      "data",
+      "fact"
+    ]
+  },
+  {
+    "es": "prueba",
+    "en": [
+      "proof",
+      "test"
+    ]
+  },
+  {
+    "es": "ventaja",
+    "en": [
+      "advantage"
+    ]
+  },
+  {
+    "es": "peligro",
+    "en": [
+      "danger"
+    ]
+  },
+  {
+    "es": "riesgo",
+    "en": [
+      "risk"
+    ]
+  },
+  {
+    "es": "esfuerzo",
+    "en": [
+      "effort"
+    ]
+  },
+  {
+    "es": "aumento",
+    "en": [
+      "increase"
+    ]
+  },
+  {
+    "es": "movimiento",
+    "en": [
+      "movement"
+    ]
+  },
+  {
+    "es": "conocimiento",
+    "en": [
+      "knowledge"
+    ]
+  },
+  {
+    "es": "pensamiento",
+    "en": [
+      "thought"
+    ]
+  },
+  {
+    "es": "sentimiento",
+    "en": [
+      "feeling"
+    ]
+  },
+  {
+    "es": "nacimiento",
+    "en": [
+      "birth"
+    ]
+  },
+  {
+    "es": "crecimiento",
+    "en": [
+      "growth"
+    ]
+  },
+  {
+    "es": "comportamiento",
+    "en": [
+      "behavior"
+    ]
+  },
+  {
+    "es": "significado",
+    "en": [
+      "meaning"
+    ]
+  },
+  {
+    "es": "propósito",
+    "en": [
+      "purpose"
+    ]
+  },
+  {
+    "es": "apoyo",
+    "en": [
+      "support"
+    ]
+  },
+  {
+    "es": "permiso",
+    "en": [
+      "permission"
+    ]
+  },
+  {
+    "es": "consejo",
+    "en": [
+      "advice"
+    ]
+  },
+  {
+    "es": "secreto",
+    "en": [
+      "secret"
+    ]
+  },
+  {
+    "es": "victoria",
+    "en": [
+      "victory"
+    ]
+  },
+  {
+    "es": "derrota",
+    "en": [
+      "defeat"
+    ]
+  },
+  {
+    "es": "vuelta",
+    "en": [
+      "turn",
+      "return"
+    ]
+  },
+  {
+    "es": "reunión",
+    "en": [
+      "meeting"
+    ]
+  },
+  {
+    "es": "conversación",
+    "en": [
+      "conversation"
+    ]
+  },
+  {
+    "es": "discurso",
+    "en": [
+      "speech"
+    ]
+  },
+  {
+    "es": "debate",
+    "en": [
+      "debate"
+    ]
+  }
+]
