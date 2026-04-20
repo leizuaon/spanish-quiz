@@ -6,6 +6,8 @@ function getHistory(){try{return JSON.parse(localStorage.getItem(STORAGE_KEY))||
 function saveScore(grade){const h=getHistory();h.push({grade,date:new Date().toISOString()});localStorage.setItem(STORAGE_KEY,JSON.stringify(h));}
 
 function norm(s){return(s||'').toLowerCase().trim().replace(/[^a-z0-9 -]/g,'').replace(/\s+/g,' ')}
+function stem(w){return w.replace(/(ing|ed|es|s|ly|er|est|ness|ment|tion|ous|ful|less|able|ible)$/,'')}
+function fuzzy(a,b){if(a===b)return true;const sa=stem(a),sb=stem(b);if(sa===sb&&sa.length>=2)return true;if(a.length>=3&&b.length>=3&&(a.startsWith(b)||b.startsWith(a)))return true;return false}
 function shuffle(a){let b=[...a];for(let i=b.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[b[i],b[j]]=[b[j],b[i]]}return b}
 
 function showWord(){
@@ -20,7 +22,7 @@ function showWord(){
 function submit(){
   const cur=round[idx], user=$('answerInput').value, un=norm(user);
   const valid=cur.en.map(norm);
-  const ok=valid.includes(un);
+  const ok=valid.some(v=>fuzzy(un,v));
   if(ok){correct++;$('feedback').textContent='✅ Correct!'}
   else{$('feedback').textContent=`❌  Accepted: ${cur.en.join(', ')}`}
   answers.push({es:cur.es,given:user,accepted:cur.en,ok});
