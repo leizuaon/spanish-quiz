@@ -9,7 +9,8 @@ body{
 }
 
 /* ── Animated background ── */
-#llamaBg{position:fixed;inset:0;z-index:0;width:100%;height:100%}\n.card{pointer-events:auto}
+#llamaBg{position:fixed;inset:0;z-index:0;width:100%;height:100%}
+.card{pointer-events:auto}
 
 /* ── Card ── */
 .card{

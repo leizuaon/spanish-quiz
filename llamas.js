@@ -1,4 +1,4 @@
-/* ── Interactive Llama Background ── */
+/* ── Interactive Llama Background v3 ── */
 (function(){
 const cv=document.getElementById('llamaBg');
 const ctx=cv.getContext('2d');
@@ -13,163 +13,225 @@ function resize(){
 resize();
 addEventListener('resize',resize);
 
-/* ── mouse tracking (through the card) ── */
 addEventListener('mousemove',e=>{mouse.x=e.clientX;mouse.y=e.clientY});
 addEventListener('click',()=>{clicked=true; setTimeout(()=>clicked=false,600)});
 addEventListener('mouseleave',()=>{mouse.x=-999;mouse.y=-999});
 
-/* ── particle trails on click ── */
+/* ── particles ── */
 const particles=[];
 class Particle{
   constructor(x,y){
     this.x=x;this.y=y;
-    this.vx=(Math.random()-.5)*6;
-    this.vy=(Math.random()-.5)*6-2;
+    this.vx=(Math.random()-.5)*7;
+    this.vy=(Math.random()-.5)*7-3;
     this.life=1;
-    this.emoji=['⭐','✨','🌟','💛','🧡'][Math.floor(Math.random()*5)];
-    this.size=12+Math.random()*10;
+    this.emoji=['⭐','✨','🌟','💛','🧡','❤️','🎉'][Math.floor(Math.random()*7)];
+    this.size=14+Math.random()*12;
   }
-  update(){this.x+=this.vx;this.y+=this.vy;this.vy+=.08;this.life-=.02}
+  update(){this.x+=this.vx;this.y+=this.vy;this.vy+=.1;this.life-=.018}
   draw(){
-    ctx.globalAlpha=Math.max(0,this.life*.6);
+    ctx.globalAlpha=Math.max(0,this.life*.8);
     ctx.font=`${this.size*this.life}px serif`;
     ctx.fillText(this.emoji,this.x,this.y);
     ctx.globalAlpha=1;
   }
 }
 
-/* ── draw llama body with canvas ── */
-function drawLlama(x,y,size,flip,legPhase,lookAngle,happy){
+/* ── llama coat palettes ── */
+const COATS=[
+  {body:'#f5e6d3',accent:'#d4a574',inner:'#f0b8a8'},
+  {body:'#e8d0b8',accent:'#c09060',inner:'#e8a890'},
+  {body:'#f0f0f0',accent:'#c0c0c0',inner:'#f0c0c0'},
+  {body:'#d4b896',accent:'#a07850',inner:'#d09878'},
+  {body:'#c8a882',accent:'#8b6840',inner:'#c89070'},
+  {body:'#f5dcc8',accent:'#d4a080',inner:'#f0a8a0'},
+];
+
+/* ── accessories ── */
+const HATS=['none','none','sombrero','flower','bow','bandana','earring'];
+
+/* ── draw a single llama ── */
+function drawLlama(x,y,size,flip,legPhase,lookAngle,happy,coat,hat){
   ctx.save();
   ctx.translate(x,y);
   const s=size/60;
   if(flip) ctx.scale(-s,s); else ctx.scale(s,s);
 
-  // legs (animated walk)
+  // shadow
+  ctx.fillStyle='rgba(0,0,0,.1)';
+  ctx.beginPath();ctx.ellipse(5,62,26,5,0,0,Math.PI*2);ctx.fill();
+
+  // legs
   const legA=Math.sin(legPhase)*12;
   const legB=Math.sin(legPhase+Math.PI)*12;
-  ctx.strokeStyle='#d4a574';ctx.lineWidth=5;ctx.lineCap='round';
-  // back legs
+  ctx.strokeStyle=coat.accent;ctx.lineWidth=5.5;ctx.lineCap='round';
   ctx.beginPath();ctx.moveTo(-10,30);ctx.lineTo(-10-legA,60);ctx.stroke();
   ctx.beginPath();ctx.moveTo(-4,30);ctx.lineTo(-4-legB,60);ctx.stroke();
-  // front legs
   ctx.beginPath();ctx.moveTo(14,30);ctx.lineTo(14+legB,60);ctx.stroke();
   ctx.beginPath();ctx.moveTo(20,30);ctx.lineTo(20+legA,60);ctx.stroke();
 
-  // body
-  ctx.fillStyle='#f5e6d3';
-  ctx.beginPath();
-  ctx.ellipse(5,22,22,14,0,0,Math.PI*2);
-  ctx.fill();
-  ctx.strokeStyle='#d4a574';ctx.lineWidth=1.5;ctx.stroke();
-
-  // neck
-  ctx.fillStyle='#f5e6d3';
-  ctx.beginPath();
-  ctx.moveTo(18,18);ctx.lineTo(22,-28);ctx.lineTo(32,-28);ctx.lineTo(28,20);
-  ctx.closePath();ctx.fill();
-  ctx.strokeStyle='#d4a574';ctx.lineWidth=1.5;ctx.stroke();
-
-  // head (tilts toward mouse)
-  ctx.save();
-  ctx.translate(27,-32);
-  ctx.rotate(lookAngle*.15);
-  ctx.fillStyle='#f5e6d3';
-  ctx.beginPath();
-  ctx.ellipse(0,0,14,11,0,0,Math.PI*2);
-  ctx.fill();ctx.strokeStyle='#d4a574';ctx.lineWidth=1.5;ctx.stroke();
-
-  // ears
-  ctx.fillStyle='#e8d5c0';
-  ctx.beginPath();ctx.ellipse(-8,-12,4,8,-.3,0,Math.PI*2);ctx.fill();ctx.stroke();
-  ctx.beginPath();ctx.ellipse(4,-13,4,8,.3,0,Math.PI*2);ctx.fill();ctx.stroke();
-
-  // inner ears
-  ctx.fillStyle='#f0b8a8';
-  ctx.beginPath();ctx.ellipse(-8,-12,2,5,-.3,0,Math.PI*2);ctx.fill();
-  ctx.beginPath();ctx.ellipse(4,-13,2,5,.3,0,Math.PI*2);ctx.fill();
-
-  // eyes
-  ctx.fillStyle='#2d1810';
-  ctx.beginPath();ctx.arc(-5,-1,2.2,0,Math.PI*2);ctx.fill();
-  ctx.beginPath();ctx.arc(6,-1,2.2,0,Math.PI*2);ctx.fill();
-
-  // eye shine
-  ctx.fillStyle='#fff';
-  ctx.beginPath();ctx.arc(-4,-2,1,0,Math.PI*2);ctx.fill();
-  ctx.beginPath();ctx.arc(7,-2,1,0,Math.PI*2);ctx.fill();
-
-  // mouth / expression
-  if(happy){
-    ctx.strokeStyle='#2d1810';ctx.lineWidth=1.5;
-    ctx.beginPath();ctx.arc(0,4,5,0.1,Math.PI-.1);ctx.stroke();
-    // blush
-    ctx.fillStyle='rgba(255,150,150,.35)';
-    ctx.beginPath();ctx.ellipse(-9,3,4,2.5,0,0,Math.PI*2);ctx.fill();
-    ctx.beginPath();ctx.ellipse(9,3,4,2.5,0,0,Math.PI*2);ctx.fill();
-  }else{
-    ctx.fillStyle='#2d1810';
-    ctx.beginPath();ctx.ellipse(0,5,3,1.5,0,0,Math.PI*2);ctx.fill();
+  // hooves
+  ctx.fillStyle='#5a4030';
+  for(const lx of [-10-legA,-4-legB,14+legB,20+legA]){
+    ctx.beginPath();ctx.ellipse(lx,61,3.5,2.5,0,0,Math.PI*2);ctx.fill();
   }
 
-  ctx.restore();
+  // body
+  ctx.fillStyle=coat.body;
+  ctx.beginPath();ctx.ellipse(5,22,24,15,0,0,Math.PI*2);ctx.fill();
+  ctx.strokeStyle=coat.accent;ctx.lineWidth=1.5;
+  ctx.beginPath();ctx.ellipse(5,22,24,15,0,0,Math.PI*2);ctx.stroke();
 
-  // fluffy tail
-  ctx.fillStyle='#f5e6d3';
-  ctx.beginPath();ctx.arc(-22,14,7,0,Math.PI*2);ctx.fill();
-  ctx.strokeStyle='#d4a574';ctx.lineWidth=1;ctx.stroke();
+  // neck
+  ctx.fillStyle=coat.body;
+  ctx.beginPath();
+  ctx.moveTo(16,18);ctx.quadraticCurveTo(18,-10,22,-30);
+  ctx.lineTo(34,-28);ctx.quadraticCurveTo(32,-5,28,20);
+  ctx.closePath();ctx.fill();
+  ctx.strokeStyle=coat.accent;ctx.lineWidth=1.5;ctx.stroke();
+
+  // head
+  ctx.save();
+  ctx.translate(28,-34);
+  ctx.rotate(lookAngle*.15);
+  ctx.fillStyle=coat.body;
+  ctx.beginPath();ctx.ellipse(0,0,15,12,0,0,Math.PI*2);
+  ctx.fill();ctx.strokeStyle=coat.accent;ctx.lineWidth=1.5;ctx.stroke();
+
+  // snout
+  ctx.fillStyle=coat.body;
+  ctx.beginPath();ctx.ellipse(12,4,6,5,0,0,Math.PI*2);ctx.fill();
+  ctx.strokeStyle=coat.accent;ctx.lineWidth=1;ctx.stroke();
+  ctx.fillStyle=coat.inner;
+  ctx.beginPath();ctx.ellipse(13,4,2,1.5,0,0,Math.PI*2);ctx.fill();
+
+  // ears
+  ctx.fillStyle=coat.body;
+  ctx.beginPath();ctx.ellipse(-8,-13,4.5,9,-.3,0,Math.PI*2);ctx.fill();ctx.strokeStyle=coat.accent;ctx.lineWidth=1.5;ctx.stroke();
+  ctx.beginPath();ctx.ellipse(5,-14,4.5,9,.3,0,Math.PI*2);ctx.fill();ctx.stroke();
+  ctx.fillStyle=coat.inner;
+  ctx.beginPath();ctx.ellipse(-8,-13,2.5,5.5,-.3,0,Math.PI*2);ctx.fill();
+  ctx.beginPath();ctx.ellipse(5,-14,2.5,5.5,.3,0,Math.PI*2);ctx.fill();
+
+  // eyes
+  if(happy){
+    ctx.strokeStyle='#2d1810';ctx.lineWidth=2;
+    ctx.beginPath();ctx.arc(-5,-2,3,Math.PI+.3,-.3);ctx.stroke();
+    ctx.beginPath();ctx.arc(6,-2,3,Math.PI+.3,-.3);ctx.stroke();
+  }else{
+    ctx.fillStyle='#2d1810';
+    ctx.beginPath();ctx.arc(-5,-1,2.8,0,Math.PI*2);ctx.fill();
+    ctx.beginPath();ctx.arc(6,-1,2.8,0,Math.PI*2);ctx.fill();
+    ctx.fillStyle='#fff';
+    ctx.beginPath();ctx.arc(-3.8,-2.2,1.2,0,Math.PI*2);ctx.fill();
+    ctx.beginPath();ctx.arc(7.2,-2.2,1.2,0,Math.PI*2);ctx.fill();
+  }
+
+  // mouth
+  if(happy){
+    ctx.strokeStyle='#2d1810';ctx.lineWidth=1.8;
+    ctx.beginPath();ctx.arc(1,5,6,0.15,Math.PI-.15);ctx.stroke();
+    ctx.fillStyle='rgba(255,120,120,.4)';
+    ctx.beginPath();ctx.ellipse(-10,4,4.5,3,0,0,Math.PI*2);ctx.fill();
+    ctx.beginPath();ctx.ellipse(12,4,4.5,3,0,0,Math.PI*2);ctx.fill();
+  }else{
+    ctx.fillStyle='#2d1810';
+    ctx.beginPath();ctx.ellipse(1,5,3,1.8,0,0,Math.PI*2);ctx.fill();
+  }
+
+  // accessory
+  if(hat==='sombrero'){
+    ctx.fillStyle='#d4760a';
+    ctx.beginPath();ctx.ellipse(0,-16,18,4,0,0,Math.PI*2);ctx.fill();
+    ctx.fillStyle='#e8960e';
+    ctx.beginPath();ctx.ellipse(0,-20,9,7,0,Math.PI,Math.PI*2);ctx.fill();
+    ctx.strokeStyle='#c06000';ctx.lineWidth=1;
+    ctx.beginPath();ctx.ellipse(0,-16,18,4,0,0,Math.PI*2);ctx.stroke();
+    ctx.fillStyle='#dc2626';ctx.fillRect(-9,-18,18,3);
+  }else if(hat==='flower'){
+    ctx.font='14px serif';ctx.fillText('🌸',-14,-18);
+  }else if(hat==='bow'){
+    ctx.fillStyle='#e8408a';
+    ctx.beginPath();ctx.ellipse(6,-18,6,4,.2,0,Math.PI*2);ctx.fill();
+    ctx.beginPath();ctx.ellipse(-2,-16,5,3.5,-.3,0,Math.PI*2);ctx.fill();
+    ctx.fillStyle='#d02070';
+    ctx.beginPath();ctx.arc(2,-17,2.5,0,Math.PI*2);ctx.fill();
+  }else if(hat==='bandana'){
+    ctx.fillStyle='#ea580c';
+    ctx.beginPath();
+    ctx.moveTo(-15,0);ctx.lineTo(15,0);ctx.lineTo(14,-4);
+    ctx.quadraticCurveTo(0,-8,-14,-4);ctx.closePath();ctx.fill();
+  }else if(hat==='earring'){
+    ctx.fillStyle='#fbbf24';
+    ctx.beginPath();ctx.arc(-12,-4,2.5,0,Math.PI*2);ctx.fill();
+    ctx.strokeStyle='#f59e0b';ctx.lineWidth=1;ctx.stroke();
+  }
+
+  ctx.restore(); // head
+
+  // tail
+  ctx.fillStyle=coat.body;
+  ctx.beginPath();ctx.arc(-24,12,8,0,Math.PI*2);ctx.fill();
+  ctx.beginPath();ctx.arc(-28,8,5,0,Math.PI*2);ctx.fill();
+  ctx.strokeStyle=coat.accent;ctx.lineWidth=1;
+  ctx.beginPath();ctx.arc(-24,12,8,0,Math.PI*2);ctx.stroke();
 
   ctx.restore();
 }
 
-/* ── llama entities ── */
-const COUNT=24;
+/* ── create llamas ── */
+const COUNT=16;
 const llamas=[];
 for(let i=0;i<COUNT;i++){
-  // spread evenly across the full width with some randomness
-  const col=i%6, row=Math.floor(i/6)%4;
-  const baseX=(col+.5)/6*innerWidth + (Math.random()-.5)*innerWidth*.12;
-  // 4 ground levels so llamas roam different heights
-  const groundY=[.40,.52,.66,.82][row]*innerHeight;
+  const col=i%4, row=Math.floor(i/4)%4;
+  const baseX=(col+.5)/4*innerWidth + (Math.random()-.5)*innerWidth*.18;
+  const groundLevels=[.44,.57,.70,.84];
+  const groundY=groundLevels[row]*innerHeight;
   llamas.push({
-    x:baseX,
-    y:groundY,
-    vx:(Math.random()-.5)*1.5,
+    x:baseX, y:groundY,
+    vx:(Math.random()-.5)*1.2,
     vy:0,
-    size:30+row*10+Math.random()*12, // farther = smaller (depth)
+    size:20+row*14+Math.random()*8,
     phase:Math.random()*Math.PI*2,
     flip:Math.random()>.5,
     happy:false,happyTimer:0,
     wobble:0,
-    groundY:groundY,
-    depth:row, // 0=top/far, 3=bottom/near
-    // wander target
+    groundY, depth:row,
     targetX:Math.random()*innerWidth,
     wanderTimer:2+Math.random()*4,
-    idleTimer:0,
-    eating:false,
+    idleTimer:0, eating:false,
+    coat:COATS[Math.floor(Math.random()*COATS.length)],
+    hat:HATS[Math.floor(Math.random()*HATS.length)],
   });
 }
 
-/* ── scenery (cacti, mountains, flowers) spread across full width ── */
+/* ── scenery ── */
 const scenery=[];
-const sceneryTypes=['🌵','🌵','🏔️','🌺','🌻','🪨','🌿'];
-for(let i=0;i<18;i++){
-  const row=Math.floor(i/6)%4;
+const sceneryTypes=['🌵','🌵','🪨','🌿','🌻','🌺','☘️'];
+for(let i=0;i<20;i++){
+  const row=Math.floor(i/5)%4;
   scenery.push({
-    x:(i%6+.5)/6*innerWidth+(Math.random()-.5)*innerWidth*.15,
-    y:[.38,.50,.63,.78][row]*innerHeight + Math.random()*25,
+    x:(i%5+.5)/5*innerWidth+(Math.random()-.5)*innerWidth*.18,
+    y:[.42,.54,.67,.81][row]*innerHeight + Math.random()*15,
     type:sceneryTypes[Math.floor(Math.random()*sceneryTypes.length)],
-    size:16+row*6+Math.random()*12,
-    sway:Math.random()*Math.PI*2
+    size:14+row*7+Math.random()*10,
+    sway:Math.random()*Math.PI*2,
+    depth:row,
   });
 }
 
-/* ── little clouds at the top ── */
+/* ── clouds ── */
 const clouds=[];
-for(let i=0;i<5;i++){
-  clouds.push({x:Math.random()*innerWidth,y:30+Math.random()*80,
-    speed:.15+Math.random()*.3,size:30+Math.random()*25,opacity:.06+Math.random()*.04});
+for(let i=0;i<6;i++){
+  clouds.push({x:Math.random()*innerWidth,y:20+Math.random()*90,
+    speed:.1+Math.random()*.25,size:28+Math.random()*30,opacity:.06+Math.random()*.05});
+}
+
+/* ── stars ── */
+const stars=[];
+for(let i=0;i<35;i++){
+  stars.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight*.35,
+    size:1+Math.random()*2, twinkle:Math.random()*Math.PI*2, speed:.5+Math.random()*2});
 }
 
 /* ── main loop ── */
@@ -179,141 +241,124 @@ function loop(t){
   lastTime=t;
   ctx.clearRect(0,0,W,H);
 
-  // sky gradient
+  // sky
   const sky=ctx.createLinearGradient(0,0,0,H);
-  sky.addColorStop(0,'rgba(15,10,30,.03)');
-  sky.addColorStop(.4,'rgba(234,88,12,.04)');
-  sky.addColorStop(1,'rgba(30,20,10,.08)');
+  sky.addColorStop(0,'rgba(10,5,25,.06)');
+  sky.addColorStop(.3,'rgba(120,40,180,.03)');
+  sky.addColorStop(.6,'rgba(234,88,12,.05)');
+  sky.addColorStop(1,'rgba(40,25,10,.10)');
   ctx.fillStyle=sky;ctx.fillRect(0,0,W,H);
 
-  // ambient glow spots
-  ctx.fillStyle='rgba(234,88,12,.04)';
-  ctx.beginPath();ctx.arc(W*.2,H*.75,W*.25,0,Math.PI*2);ctx.fill();
-  ctx.fillStyle='rgba(168,85,247,.03)';
-  ctx.beginPath();ctx.arc(W*.8,H*.3,W*.2,0,Math.PI*2);ctx.fill();
+  // twinkling stars
+  for(const st of stars){
+    st.twinkle+=st.speed*dt;
+    const a=.04+Math.sin(st.twinkle)*.03;
+    ctx.fillStyle=`rgba(255,240,200,${a})`;
+    ctx.beginPath();ctx.arc(st.x,st.y,st.size,0,Math.PI*2);ctx.fill();
+  }
+
+  // glow spots
+  ctx.fillStyle='rgba(234,88,12,.035)';
+  ctx.beginPath();ctx.arc(W*.15,H*.8,W*.22,0,Math.PI*2);ctx.fill();
+  ctx.fillStyle='rgba(168,85,247,.025)';
+  ctx.beginPath();ctx.arc(W*.85,H*.25,W*.18,0,Math.PI*2);ctx.fill();
+  ctx.fillStyle='rgba(250,200,50,.02)';
+  ctx.beginPath();ctx.arc(W*.5,H*.6,W*.3,0,Math.PI*2);ctx.fill();
 
   // clouds
   for(const c of clouds){
     c.x+=c.speed*dt*30;
-    if(c.x>W+60)c.x=-60;
+    if(c.x>W+80)c.x=-80;
     ctx.globalAlpha=c.opacity;
     ctx.font=`${c.size}px serif`;
     ctx.fillText('☁️',c.x,c.y);
   }
   ctx.globalAlpha=1;
 
-  // 3 rolling ground layers
-  const groundColors=['rgba(34,30,20,.03)','rgba(34,30,20,.05)','rgba(34,30,20,.08)','rgba(34,30,20,.12)'];
-  const groundYs=[.38,.50,.63,.78];
+  // rolling ground
+  const groundColors=['rgba(40,35,20,.04)','rgba(40,35,20,.07)','rgba(40,35,20,.10)','rgba(40,35,20,.14)'];
+  const groundYs=[.42,.55,.68,.82];
   for(let g=0;g<4;g++){
     ctx.fillStyle=groundColors[g];
     ctx.beginPath();
     ctx.moveTo(0,H);ctx.lineTo(0,groundYs[g]*H);
-    for(let i=0;i<=W;i+=30){
-      ctx.lineTo(i,groundYs[g]*H+Math.sin(i*.008+g*2+t*.0002)*6);
+    for(let i=0;i<=W;i+=20){
+      ctx.lineTo(i,groundYs[g]*H+Math.sin(i*.006+g*2.5+t*.00015)*8);
     }
     ctx.lineTo(W,H);ctx.closePath();ctx.fill();
   }
 
-  // scenery
-  for(const s of scenery){
-    s.sway+=dt*.4;
-    ctx.globalAlpha=.12;
+  // collect & depth-sort all entities
+  const drawables=[];
+  for(const s of scenery) drawables.push({depth:s.depth+.1, draw:()=>{
+    s.sway+=dt*.5;
+    const a=[.08,.14,.22,.35][s.depth];
+    ctx.globalAlpha=a;
     ctx.font=`${s.size}px serif`;
     ctx.fillText(s.type,s.x,s.y+Math.sin(s.sway)*2);
-  }
-  ctx.globalAlpha=1;
+    ctx.globalAlpha=1;
+  }});
 
-  // spawn particles on click
-  if(clicked && mouse.x>0){
-    for(let i=0;i<8;i++) particles.push(new Particle(mouse.x,mouse.y));
-  }
-
-  // update & draw particles
-  for(let i=particles.length-1;i>=0;i--){
-    particles[i].update();
-    particles[i].draw();
-    if(particles[i].life<=0) particles.splice(i,1);
-  }
-
-  // sort llamas by depth so far ones draw first
-  llamas.sort((a,b)=>a.depth-b.depth);
-
-  // update & draw llamas
-  for(const ll of llamas){
-    // wander AI
+  for(const ll of llamas) drawables.push({depth:ll.depth, draw:()=>{
+    // wander
     ll.wanderTimer-=dt;
     if(ll.wanderTimer<=0){
       ll.targetX=Math.random()*W;
       ll.wanderTimer=3+Math.random()*5;
-      // sometimes idle/eat
-      if(Math.random()<.3){ll.idleTimer=1.5+Math.random()*2;ll.eating=true}
+      if(Math.random()<.25){ll.idleTimer=2+Math.random()*3;ll.eating=true}
     }
-
     if(ll.idleTimer>0){
-      ll.idleTimer-=dt;
-      ll.vx*=.9; // slow down to idle
+      ll.idleTimer-=dt; ll.vx*=.92;
       if(ll.idleTimer<=0) ll.eating=false;
     }else{
-      // walk toward target
       const toTarget=ll.targetX-ll.x;
-      if(Math.abs(toTarget)>20){
-        ll.vx+=Math.sign(toTarget)*.04;
-        ll.flip=toTarget<0;
-      }
+      if(Math.abs(toTarget)>25){ll.vx+=Math.sign(toTarget)*.035;ll.flip=toTarget<0}
     }
 
-    // mouse attraction (overrides wander when close)
     const dx=mouse.x-ll.x, dy=mouse.y-ll.y;
     const dist=Math.sqrt(dx*dx+dy*dy);
-
-    if(dist<220 && mouse.x>0){
-      ll.vx+=(dx/dist)*.08;
-      ll.flip=dx<0;
-      ll.wobble=Math.atan2(dy,Math.abs(dx))*.5;
+    if(dist<250 && mouse.x>0){
+      ll.vx+=(dx/dist)*.07;ll.flip=dx<0;
+      ll.wobble=Math.atan2(dy,Math.abs(dx))*.4;
       ll.eating=false;ll.idleTimer=0;
-    }else{
-      ll.wobble*=.93;
-    }
+    }else{ ll.wobble*=.94 }
 
-    // clicked nearby → happy jump!
-    if(clicked && dist<250){
-      ll.happy=true;ll.happyTimer=2.5;
-      ll.vy=-3.5; // little jump
+    if(clicked && dist<280){
+      ll.happy=true;ll.happyTimer=3;ll.vy=-4;
+      for(let p=0;p<5;p++) particles.push(new Particle(ll.x,ll.y-ll.size));
     }
     if(ll.happyTimer>0){ll.happyTimer-=dt}else{ll.happy=false}
 
-    // speed cap
-    ll.vx=Math.max(-2.5,Math.min(2.5,ll.vx));
+    ll.vx=Math.max(-2,Math.min(2,ll.vx));
+    ll.vx*=.97; ll.vy+=.12;
+    ll.x+=ll.vx; ll.y+=ll.vy;
 
-    // physics
-    ll.vx*=.97;
-    ll.vy+=.12; // gravity
-    ll.x+=ll.vx;
-    ll.y+=ll.vy;
-
-    // ground constraint (per-llama ground level)
-    const gndWave=Math.sin(ll.x*.008+ll.depth*2+t*.0002)*6;
+    const gndWave=Math.sin(ll.x*.006+ll.depth*2.5+t*.00015)*8;
     const gnd=ll.groundY+gndWave;
-    if(ll.y>gnd-ll.size*.3){
-      ll.y=gnd-ll.size*.3;
-      ll.vy=0;
-    }
+    if(ll.y>gnd-ll.size*.3){ll.y=gnd-ll.size*.3;ll.vy=0}
+    if(ll.x<-120) ll.x=W+100;
+    if(ll.x>W+120) ll.x=-100;
 
-    // wrap horizontally with margin
-    if(ll.x<-100) ll.x=W+80;
-    if(ll.x>W+100) ll.x=-80;
-
-    // walk animation
     const speed=Math.abs(ll.vx);
     ll.phase+=speed*dt*5;
 
-    // depth-based opacity (far = more transparent)
-    const baseAlpha=[.10,.16,.22,.30][ll.depth];
-    ctx.globalAlpha=baseAlpha+(ll.happy?.12:0);
+    const baseAlpha=[.18,.32,.50,.70][ll.depth];
+    ctx.globalAlpha=baseAlpha+(ll.happy?.15:0);
     const lookAngle=ll.wobble+Math.sin(t*.001+ll.phase)*.08;
-    drawLlama(ll.x,ll.y,ll.size,ll.flip,speed>.15?ll.phase:0,lookAngle,ll.happy||ll.eating);
+    drawLlama(ll.x,ll.y,ll.size,ll.flip,speed>.12?ll.phase:0,lookAngle,ll.happy||ll.eating,ll.coat,ll.hat);
     ctx.globalAlpha=1;
+  }});
+
+  drawables.sort((a,b)=>a.depth-b.depth);
+  for(const d of drawables) d.draw();
+
+  // particles
+  if(clicked && mouse.x>0){
+    for(let i=0;i<6;i++) particles.push(new Particle(mouse.x,mouse.y));
+  }
+  for(let i=particles.length-1;i>=0;i--){
+    particles[i].update();particles[i].draw();
+    if(particles[i].life<=0) particles.splice(i,1);
   }
 
   requestAnimationFrame(loop);
