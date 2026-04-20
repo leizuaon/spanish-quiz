@@ -234,6 +234,119 @@ for(let i=0;i<35;i++){
     size:1+Math.random()*2, twinkle:Math.random()*Math.PI*2, speed:.5+Math.random()*2});
 }
 
+/* ── Machu Picchu backdrop ── */
+function drawMachuPicchu(t){
+  const cx=W*.5, baseY=H*.34;
+  const sw=Math.min(W*.7,600); // scale to screen
+  const sh=sw*.55;
+  ctx.save();
+  ctx.translate(cx,baseY);
+
+  // distant misty mountains behind
+  ctx.globalAlpha=.045;
+  ctx.fillStyle='#6b5b4f';
+  // left mountain
+  ctx.beginPath();
+  ctx.moveTo(-sw*.55,sh*.1);
+  ctx.lineTo(-sw*.35,-sh*.45);
+  ctx.lineTo(-sw*.15,sh*.1);
+  ctx.closePath();ctx.fill();
+  // right mountain  
+  ctx.beginPath();
+  ctx.moveTo(sw*.15,sh*.1);
+  ctx.lineTo(sw*.38,-sh*.55);
+  ctx.lineTo(sw*.58,sh*.1);
+  ctx.closePath();ctx.fill();
+
+  // Huayna Picchu (iconic steep peak on the left)
+  ctx.globalAlpha=.07;
+  ctx.fillStyle='#5a4a3e';
+  ctx.beginPath();
+  ctx.moveTo(-sw*.22,sh*.08);
+  ctx.lineTo(-sw*.18,-sh*.5);
+  ctx.quadraticCurveTo(-sw*.14,-sh*.58,-sw*.10,-sh*.48);
+  ctx.lineTo(-sw*.05,-sh*.1);
+  ctx.lineTo(-sw*.22,sh*.08);
+  ctx.closePath();ctx.fill();
+
+  // main mountain behind ruins
+  ctx.globalAlpha=.055;
+  ctx.fillStyle='#6b5b4f';
+  ctx.beginPath();
+  ctx.moveTo(-sw*.3,sh*.1);
+  ctx.lineTo(-sw*.08,-sh*.3);
+  ctx.quadraticCurveTo(0,-sh*.35,sw*.08,-sh*.28);
+  ctx.lineTo(sw*.3,sh*.1);
+  ctx.closePath();ctx.fill();
+
+  // terraces (the famous agricultural steps)
+  ctx.globalAlpha=.06;
+  for(let i=0;i<7;i++){
+    const ty=sh*(-.05+i*.035);
+    const tw=sw*(.12+i*.035);
+    ctx.fillStyle=i%2===0?'#7a8a50':'#6b7a45';
+    ctx.beginPath();
+    ctx.moveTo(-tw,ty+sh*.025);
+    ctx.lineTo(-tw,ty);
+    ctx.quadraticCurveTo(0,ty-sh*.01,tw,ty);
+    ctx.lineTo(tw,ty+sh*.025);
+    ctx.closePath();ctx.fill();
+  }
+
+  // stone ruins - main temple area
+  ctx.globalAlpha=.065;
+  ctx.fillStyle='#a09080';
+  // temple of the sun (central structure)
+  ctx.fillRect(-sw*.06,sh*-.12,sw*.04,sh*.08);
+  ctx.fillRect(-sw*.02,sh*-.15,sw*.05,sh*.11);
+  ctx.fillRect(sw*.04,sh*-.10,sw*.04,sh*.06);
+  // intihuatana (ritual stone)
+  ctx.fillRect(-sw*.12,sh*-.08,sw*.03,sh*.04);
+  // walls
+  ctx.fillRect(sw*.08,sh*-.12,sw*.06,sh*.08);
+  ctx.fillRect(sw*.15,sh*-.09,sw*.04,sh*.05);
+  // small structures scattered
+  ctx.fillRect(-sw*.18,sh*-.04,sw*.03,sh*.03);
+  ctx.fillRect(sw*.20,sh*-.06,sw*.03,sh*.04);
+
+  // stone blocks texture on ruins
+  ctx.strokeStyle='#8a7a6a';ctx.lineWidth=.5;ctx.globalAlpha=.04;
+  for(let bx=-sw*.18;bx<sw*.24;bx+=sw*.025){
+    for(let by=sh*-.15;by<sh*.0;by+=sh*.02){
+      if(Math.random()>.6){
+        ctx.strokeRect(bx,by,sw*.02,sh*.015);
+      }
+    }
+  }
+
+  // windows/doors on temples
+  ctx.globalAlpha=.05;
+  ctx.fillStyle='#3a3028';
+  // trapezoidal windows (Inca style)
+  const windows=[[-sw*.04,sh*-.10],[0,sh*-.12],[sw*.01,sh*-.10],[sw*.05,sh*-.08],[sw*.10,sh*-.09]];
+  for(const [wx,wy] of windows){
+    ctx.beginPath();
+    ctx.moveTo(wx-sw*.005,wy+sh*.025);
+    ctx.lineTo(wx-sw*.003,wy);
+    ctx.lineTo(wx+sw*.003,wy);
+    ctx.lineTo(wx+sw*.005,wy+sh*.025);
+    ctx.closePath();ctx.fill();
+  }
+
+  // mist/fog around the ruins
+  ctx.globalAlpha=.03;
+  ctx.fillStyle='#c0b8a8';
+  for(let i=0;i<4;i++){
+    const mx=(-sw*.3+i*sw*.2)+Math.sin(t*.0003+i*2)*sw*.04;
+    const my=sh*(-.05+i*.02);
+    ctx.beginPath();
+    ctx.ellipse(mx,my,sw*.12,sh*.03,0,0,Math.PI*2);
+    ctx.fill();
+  }
+
+  ctx.restore();
+}
+
 /* ── main loop ── */
 let lastTime=0;
 function loop(t){
@@ -274,6 +387,9 @@ function loop(t){
     ctx.fillText('☁️',c.x,c.y);
   }
   ctx.globalAlpha=1;
+
+  // ── Machu Picchu silhouette (far background) ──
+  drawMachuPicchu(t);
 
   // rolling ground
   const groundColors=['rgba(40,35,20,.04)','rgba(40,35,20,.07)','rgba(40,35,20,.10)','rgba(40,35,20,.14)'];
