@@ -103,7 +103,7 @@ function renderChart(){
 
   // Line
   ctx.beginPath();
-  ctx.strokeStyle='#3b82f6';ctx.lineWidth=2.5;ctx.lineJoin='round';
+  ctx.strokeStyle='#ea580c';ctx.lineWidth=2.5;ctx.lineJoin='round';
   show.forEach((s,i)=>{
     const x=pad.l+(n>1?i*gap:cw/2), y=pad.t+ch*(1-s/100);
     i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);
@@ -116,7 +116,7 @@ function renderChart(){
   ctx.lineTo(pad.l,pad.t+ch);
   ctx.closePath();
   const grad=ctx.createLinearGradient(0,pad.t,0,pad.t+ch);
-  grad.addColorStop(0,'rgba(59,130,246,0.25)');grad.addColorStop(1,'rgba(59,130,246,0)');
+  grad.addColorStop(0,'rgba(234,88,12,0.25)');grad.addColorStop(1,'rgba(234,88,12,0)');
   ctx.fillStyle=grad;ctx.fill();
 
   // Dots
