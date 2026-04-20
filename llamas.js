@@ -11,7 +11,7 @@ function resize(){
   ctx.setTransform(dpr,0,0,dpr,0,0);
 }
 resize();
-addEventListener('resize',resize);
+addEventListener('resize',()=>{resize();vignetteGrad=null});
 
 addEventListener('mousemove',e=>{mouse.x=e.clientX;mouse.y=e.clientY});
 addEventListener('click',()=>{clicked=true; setTimeout(()=>clicked=false,600)});
@@ -229,9 +229,39 @@ for(let i=0;i<6;i++){
 
 /* ── stars ── */
 const stars=[];
-for(let i=0;i<35;i++){
-  stars.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight*.35,
-    size:1+Math.random()*2, twinkle:Math.random()*Math.PI*2, speed:.5+Math.random()*2});
+for(let i=0;i<50;i++){
+  stars.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight*.4,
+    size:.8+Math.random()*2.5, twinkle:Math.random()*Math.PI*2, speed:.3+Math.random()*2.5,
+    depth:Math.random()});
+}
+
+/* ── parallax mouse (smoothed) ── */
+let px=0, py=0; // parallax offset -1 to 1
+
+/* ── floating dust motes at various depths ── */
+const dust=[];
+for(let i=0;i<60;i++){
+  dust.push({
+    x:Math.random()*innerWidth, y:Math.random()*innerHeight,
+    size:.5+Math.random()*2.5,
+    speed:.08+Math.random()*.2,
+    drift:Math.random()*Math.PI*2,
+    driftSpeed:.3+Math.random()*.5,
+    depth:Math.random(), // 0=far, 1=near
+    opacity:.02+Math.random()*.06,
+  });
+}
+
+/* ── god rays ── */
+const rays=[];
+for(let i=0;i<5;i++){
+  rays.push({
+    x:.15+Math.random()*.7, // fraction of W
+    width:.03+Math.random()*.05,
+    opacity:.015+Math.random()*.02,
+    speed:.0001+Math.random()*.0002,
+    phase:Math.random()*Math.PI*2,
+  });
 }
 
 /* ── Machu Picchu backdrop ── */
@@ -347,6 +377,15 @@ function drawMachuPicchu(t){
   ctx.restore();
 }
 
+/* ── vignette (pre-rendered offscreen) ── */
+let vignetteGrad=null;
+function buildVignette(){
+  vignetteGrad=ctx.createRadialGradient(W/2,H/2,Math.min(W,H)*.25,W/2,H/2,Math.max(W,H)*.85);
+  vignetteGrad.addColorStop(0,'rgba(0,0,0,0)');
+  vignetteGrad.addColorStop(.6,'rgba(0,0,0,0)');
+  vignetteGrad.addColorStop(1,'rgba(0,0,0,.35)');
+}
+
 /* ── main loop ── */
 let lastTime=0;
 function loop(t){
@@ -354,64 +393,119 @@ function loop(t){
   lastTime=t;
   ctx.clearRect(0,0,W,H);
 
-  // sky
+  // smooth parallax tracking
+  const targetPx=mouse.x>0?(mouse.x/W-.5)*2:0;
+  const targetPy=mouse.x>0?(mouse.y/H-.5)*2:0;
+  px+=(targetPx-px)*.03;
+  py+=(targetPy-py)*.03;
+
+  // sky — richer gradient
   const sky=ctx.createLinearGradient(0,0,0,H);
-  sky.addColorStop(0,'rgba(10,5,25,.06)');
-  sky.addColorStop(.3,'rgba(120,40,180,.03)');
-  sky.addColorStop(.6,'rgba(234,88,12,.05)');
-  sky.addColorStop(1,'rgba(40,25,10,.10)');
+  sky.addColorStop(0,'rgba(8,3,20,.08)');
+  sky.addColorStop(.2,'rgba(20,10,50,.06)');
+  sky.addColorStop(.4,'rgba(100,30,140,.04)');
+  sky.addColorStop(.7,'rgba(234,88,12,.06)');
+  sky.addColorStop(1,'rgba(40,25,10,.12)');
   ctx.fillStyle=sky;ctx.fillRect(0,0,W,H);
 
-  // twinkling stars
+  // twinkling stars (parallax layer 0 — very far)
   for(const st of stars){
     st.twinkle+=st.speed*dt;
-    const a=.04+Math.sin(st.twinkle)*.03;
+    const a=.04+Math.sin(st.twinkle)*.04;
+    const pxOff=px*3*(1-st.depth); // far stars barely move
+    const pyOff=py*2*(1-st.depth);
     ctx.fillStyle=`rgba(255,240,200,${a})`;
-    ctx.beginPath();ctx.arc(st.x,st.y,st.size,0,Math.PI*2);ctx.fill();
+    ctx.beginPath();ctx.arc(st.x+pxOff,st.y+pyOff,st.size,0,Math.PI*2);ctx.fill();
   }
 
-  // glow spots
-  ctx.fillStyle='rgba(234,88,12,.035)';
-  ctx.beginPath();ctx.arc(W*.15,H*.8,W*.22,0,Math.PI*2);ctx.fill();
-  ctx.fillStyle='rgba(168,85,247,.025)';
-  ctx.beginPath();ctx.arc(W*.85,H*.25,W*.18,0,Math.PI*2);ctx.fill();
-  ctx.fillStyle='rgba(250,200,50,.02)';
-  ctx.beginPath();ctx.arc(W*.5,H*.6,W*.3,0,Math.PI*2);ctx.fill();
+  // glow spots (slight parallax)
+  ctx.fillStyle='rgba(234,88,12,.04)';
+  ctx.beginPath();ctx.arc(W*.15+px*8,H*.8+py*4,W*.22,0,Math.PI*2);ctx.fill();
+  ctx.fillStyle='rgba(168,85,247,.03)';
+  ctx.beginPath();ctx.arc(W*.85+px*6,H*.25+py*3,W*.18,0,Math.PI*2);ctx.fill();
+  ctx.fillStyle='rgba(250,200,50,.025)';
+  ctx.beginPath();ctx.arc(W*.5+px*5,H*.55+py*3,W*.3,0,Math.PI*2);ctx.fill();
 
-  // clouds
+  // god rays
+  for(const r of rays){
+    r.phase+=r.speed;
+    const rx=r.x*W+Math.sin(t*r.speed*5)*W*.02+px*10;
+    const rw=r.width*W;
+    const a=r.opacity*(0.7+Math.sin(t*.0005+r.phase)*.3);
+    const grad=ctx.createLinearGradient(rx,0,rx,H);
+    grad.addColorStop(0,`rgba(255,220,150,${a})`);
+    grad.addColorStop(.5,`rgba(255,200,100,${a*.4})`);
+    grad.addColorStop(1,'rgba(255,200,100,0)');
+    ctx.fillStyle=grad;
+    ctx.beginPath();
+    ctx.moveTo(rx-rw*.3,0);ctx.lineTo(rx+rw*.3,0);
+    ctx.lineTo(rx+rw*1.5,H);ctx.lineTo(rx-rw*1.5,H);
+    ctx.closePath();ctx.fill();
+  }
+
+  // clouds (parallax layer 1)
   for(const c of clouds){
     c.x+=c.speed*dt*30;
     if(c.x>W+80)c.x=-80;
     ctx.globalAlpha=c.opacity;
     ctx.font=`${c.size}px serif`;
-    ctx.fillText('☁️',c.x,c.y);
+    ctx.fillText('☁️',c.x+px*12,c.y+py*6);
   }
   ctx.globalAlpha=1;
 
-  // ── Machu Picchu silhouette (far background) ──
+  // ── Machu Picchu silhouette (far background, parallax layer 2) ──
+  ctx.save();
+  ctx.translate(px*18,py*10);
   drawMachuPicchu(t);
+  ctx.restore();
 
-  // rolling ground
-  const groundColors=['rgba(40,35,20,.04)','rgba(40,35,20,.07)','rgba(40,35,20,.10)','rgba(40,35,20,.14)'];
+  // atmospheric haze between Machu Picchu and ground
+  ctx.fillStyle='rgba(12,10,20,.03)';
+  ctx.fillRect(0,H*.3,W,H*.15);
+
+  // rolling ground with parallax per layer
+  const groundColors=['rgba(40,35,20,.05)','rgba(40,35,20,.08)','rgba(40,35,20,.12)','rgba(40,35,20,.16)'];
   const groundYs=[.42,.55,.68,.82];
+  const groundParallax=[20,30,45,65]; // px shift per layer
   for(let g=0;g<4;g++){
+    const gpx=px*groundParallax[g];
+    const gpy=py*groundParallax[g]*.3;
     ctx.fillStyle=groundColors[g];
     ctx.beginPath();
-    ctx.moveTo(0,H);ctx.lineTo(0,groundYs[g]*H);
+    ctx.moveTo(0,H);ctx.lineTo(0,groundYs[g]*H+gpy);
     for(let i=0;i<=W;i+=20){
-      ctx.lineTo(i,groundYs[g]*H+Math.sin(i*.006+g*2.5+t*.00015)*8);
+      ctx.lineTo(i,groundYs[g]*H+gpy+Math.sin((i+gpx)*.006+g*2.5+t*.00015)*8);
     }
     ctx.lineTo(W,H);ctx.closePath();ctx.fill();
   }
 
+  // far dust motes (behind entities)
+  for(const d of dust){
+    if(d.depth>.5) continue;
+    d.y-=d.speed*dt*30;
+    d.drift+=d.driftSpeed*dt;
+    d.x+=Math.sin(d.drift)*0.3;
+    if(d.y<-10){d.y=H+10;d.x=Math.random()*W}
+    const dpx=px*15*(1-d.depth);
+    const dpy=py*10*(1-d.depth);
+    ctx.globalAlpha=d.opacity*(0.5+d.depth);
+    ctx.fillStyle='rgba(255,230,180,1)';
+    ctx.beginPath();ctx.arc(d.x+dpx,d.y+dpy,d.size,0,Math.PI*2);ctx.fill();
+  }
+  ctx.globalAlpha=1;
+
   // collect & depth-sort all entities
   const drawables=[];
+  const entityParallax=[22,35,50,70];
+
   for(const s of scenery) drawables.push({depth:s.depth+.1, draw:()=>{
     s.sway+=dt*.5;
     const a=[.08,.14,.22,.35][s.depth];
+    const spx=px*entityParallax[s.depth];
+    const spy=py*entityParallax[s.depth]*.3;
     ctx.globalAlpha=a;
     ctx.font=`${s.size}px serif`;
-    ctx.fillText(s.type,s.x,s.y+Math.sin(s.sway)*2);
+    ctx.fillText(s.type,s.x+spx,s.y+spy+Math.sin(s.sway)*2);
     ctx.globalAlpha=1;
   }});
 
@@ -458,15 +552,45 @@ function loop(t){
     const speed=Math.abs(ll.vx);
     ll.phase+=speed*dt*5;
 
+    // parallax offset per depth
+    const lpx=px*entityParallax[ll.depth];
+    const lpy=py*entityParallax[ll.depth]*.3;
+
     const baseAlpha=[.18,.32,.50,.70][ll.depth];
     ctx.globalAlpha=baseAlpha+(ll.happy?.15:0);
     const lookAngle=ll.wobble+Math.sin(t*.001+ll.phase)*.08;
-    drawLlama(ll.x,ll.y,ll.size,ll.flip,speed>.12?ll.phase:0,lookAngle,ll.happy||ll.eating,ll.coat,ll.hat);
+    drawLlama(ll.x+lpx,ll.y+lpy,ll.size,ll.flip,speed>.12?ll.phase:0,lookAngle,ll.happy||ll.eating,ll.coat,ll.hat);
     ctx.globalAlpha=1;
   }});
 
   drawables.sort((a,b)=>a.depth-b.depth);
-  for(const d of drawables) d.draw();
+
+  // draw with depth haze between layers
+  let lastDepth=-1;
+  for(const d of drawables){
+    // atmospheric haze between depth layers
+    if(Math.floor(d.depth)>lastDepth && lastDepth>=0){
+      ctx.fillStyle='rgba(12,10,20,.012)';
+      ctx.fillRect(0,0,W,H);
+    }
+    lastDepth=Math.floor(d.depth);
+    d.draw();
+  }
+
+  // near dust motes (in front of entities)
+  for(const d of dust){
+    if(d.depth<=.5) continue;
+    d.y-=d.speed*dt*30;
+    d.drift+=d.driftSpeed*dt;
+    d.x+=Math.sin(d.drift)*0.4;
+    if(d.y<-10){d.y=H+10;d.x=Math.random()*W}
+    const dpx=px*60*d.depth;
+    const dpy=py*30*d.depth;
+    ctx.globalAlpha=d.opacity*d.depth;
+    ctx.fillStyle='rgba(255,240,200,1)';
+    ctx.beginPath();ctx.arc(d.x+dpx,d.y+dpy,d.size*1.5,0,Math.PI*2);ctx.fill();
+  }
+  ctx.globalAlpha=1;
 
   // particles
   if(clicked && mouse.x>0){
@@ -476,6 +600,11 @@ function loop(t){
     particles[i].update();particles[i].draw();
     if(particles[i].life<=0) particles.splice(i,1);
   }
+
+  // vignette overlay
+  if(!vignetteGrad) buildVignette();
+  ctx.fillStyle=vignetteGrad;
+  ctx.fillRect(0,0,W,H);
 
   requestAnimationFrame(loop);
 }
