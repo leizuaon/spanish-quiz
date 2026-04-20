@@ -123,14 +123,14 @@ function drawLlama(x,y,size,flip,legPhase,lookAngle,happy){
 }
 
 /* ── llama entities ── */
-const COUNT=12;
+const COUNT=24;
 const llamas=[];
 for(let i=0;i<COUNT;i++){
   // spread evenly across the full width with some randomness
-  const col=i%4, row=Math.floor(i/4);
-  const baseX=(col+.5)/4*innerWidth + (Math.random()-.5)*innerWidth*.15;
-  // 3 ground levels so llamas roam different heights
-  const groundY=[.55,.68,.82][row]*innerHeight;
+  const col=i%6, row=Math.floor(i/6)%4;
+  const baseX=(col+.5)/6*innerWidth + (Math.random()-.5)*innerWidth*.12;
+  // 4 ground levels so llamas roam different heights
+  const groundY=[.40,.52,.66,.82][row]*innerHeight;
   llamas.push({
     x:baseX,
     y:groundY,
@@ -142,7 +142,7 @@ for(let i=0;i<COUNT;i++){
     happy:false,happyTimer:0,
     wobble:0,
     groundY:groundY,
-    depth:row, // 0=top/far, 2=bottom/near
+    depth:row, // 0=top/far, 3=bottom/near
     // wander target
     targetX:Math.random()*innerWidth,
     wanderTimer:2+Math.random()*4,
@@ -154,11 +154,11 @@ for(let i=0;i<COUNT;i++){
 /* ── scenery (cacti, mountains, flowers) spread across full width ── */
 const scenery=[];
 const sceneryTypes=['🌵','🌵','🏔️','🌺','🌻','🪨','🌿'];
-for(let i=0;i<12;i++){
-  const row=Math.floor(i/4);
+for(let i=0;i<18;i++){
+  const row=Math.floor(i/6)%4;
   scenery.push({
-    x:(i%4+.5)/4*innerWidth+(Math.random()-.5)*innerWidth*.2,
-    y:[.52,.65,.80][row]*innerHeight + Math.random()*30,
+    x:(i%6+.5)/6*innerWidth+(Math.random()-.5)*innerWidth*.15,
+    y:[.38,.50,.63,.78][row]*innerHeight + Math.random()*25,
     type:sceneryTypes[Math.floor(Math.random()*sceneryTypes.length)],
     size:16+row*6+Math.random()*12,
     sway:Math.random()*Math.PI*2
@@ -203,9 +203,9 @@ function loop(t){
   ctx.globalAlpha=1;
 
   // 3 rolling ground layers
-  const groundColors=['rgba(34,30,20,.05)','rgba(34,30,20,.08)','rgba(34,30,20,.12)'];
-  const groundYs=[.52,.65,.78];
-  for(let g=0;g<3;g++){
+  const groundColors=['rgba(34,30,20,.03)','rgba(34,30,20,.05)','rgba(34,30,20,.08)','rgba(34,30,20,.12)'];
+  const groundYs=[.38,.50,.63,.78];
+  for(let g=0;g<4;g++){
     ctx.fillStyle=groundColors[g];
     ctx.beginPath();
     ctx.moveTo(0,H);ctx.lineTo(0,groundYs[g]*H);
@@ -309,7 +309,7 @@ function loop(t){
     ll.phase+=speed*dt*5;
 
     // depth-based opacity (far = more transparent)
-    const baseAlpha=[.14,.20,.28][ll.depth];
+    const baseAlpha=[.10,.16,.22,.30][ll.depth];
     ctx.globalAlpha=baseAlpha+(ll.happy?.12:0);
     const lookAngle=ll.wobble+Math.sin(t*.001+ll.phase)*.08;
     drawLlama(ll.x,ll.y,ll.size,ll.flip,speed>.15?ll.phase:0,lookAngle,ll.happy||ll.eating);
