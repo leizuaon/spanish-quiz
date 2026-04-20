@@ -12,7 +12,8 @@ function shuffle(a){let b=[...a];for(let i=b.length-1;i>0;i--){let j=Math.floor(
 
 function showWord(){
   $('progress').textContent=`${idx+1} / 10`;
-  $('score').textContent=`Score: ${correct}`;
+  $('progressFill').style.width=`${(idx+1)*10}%`;
+  $('score').textContent=`${correct} ✓`;
   $('spanishWord').textContent=round[idx].es;
   $('answerInput').value='';
   $('feedback').innerHTML='&nbsp;';
