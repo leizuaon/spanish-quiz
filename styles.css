@@ -3,30 +3,25 @@
 html{scroll-behavior:smooth}
 body{
   font-family:'Inter',system-ui,-apple-system,sans-serif;
-  background:#0c0a14;color:#e2e8f0;
+  background:linear-gradient(180deg,#12101f 0%,#0f172a 100%);color:#e2e8f0;
   display:grid;place-items:center;min-height:100vh;
   overflow-x:hidden;
 }
 
-/* ── Animated background ── */
-#llamaBg{position:fixed;inset:0;z-index:0;width:100%;height:100%}
+/* ── Static background ── */
 .card{pointer-events:auto}
 
 /* ── Card ── */
 .card{
   position:relative;z-index:1;
   width:min(500px,90vw);
-  background:rgba(28,25,43,.6);
-  backdrop-filter:blur(24px) saturate(1.4);
-  -webkit-backdrop-filter:blur(24px) saturate(1.4);
+  background:rgba(28,25,43,.95);
   border:1px solid rgba(234,88,12,.1);
   padding:36px 32px;
   border-radius:24px;
   text-align:center;
-  box-shadow:0 8px 60px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.06);
-  animation:cardIn .5s ease-out;
+  box-shadow:0 8px 24px rgba(0,0,0,.28);
 }
-@keyframes cardIn{from{opacity:0;transform:translateY(24px) scale(.97)}to{opacity:1;transform:none}}
 
 /* ── Header ── */
 .card-header{margin-bottom:24px}
@@ -37,8 +32,7 @@ h1{font-size:1.7rem;font-weight:800;letter-spacing:-.02em;
 .subtitle{color:#94a3b8;font-size:.9rem;margin-top:4px}
 
 /* ── Start Section ── */
-.hero-icon{font-size:3rem;margin-bottom:12px;animation:bounce 2s ease-in-out infinite}
-@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.hero-icon{font-size:3rem;margin-bottom:12px}
 .intro{color:#94a3b8;line-height:1.6;margin-bottom:20px;font-size:.95rem}
 .intro strong{color:#e2e8f0}
 
@@ -73,9 +67,7 @@ h1{font-size:1.7rem;font-weight:800;letter-spacing:-.02em;
 }
 .word-card .label{color:#64748b;font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;display:block;margin-bottom:8px}
 .word-card h2{font-size:2.4rem;font-weight:700;letter-spacing:.01em;margin:0;
-  animation:wordIn .3s ease-out;
 }
-@keyframes wordIn{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:none}}
 
 .input-wrap{display:flex;gap:10px}
 .input-wrap input{
@@ -95,9 +87,7 @@ h1{font-size:1.7rem;font-weight:800;letter-spacing:-.02em;
   width:130px;height:130px;border-radius:50%;display:grid;place-items:center;
   margin:8px auto 16px;font-size:2.6rem;font-weight:800;
   border:5px solid #ea580c;position:relative;
-  animation:popIn .5s cubic-bezier(.34,1.56,.64,1);
 }
-@keyframes popIn{from{opacity:0;transform:scale(.5)}to{opacity:1;transform:scale(1)}}
 .grade-circle.great{border-color:#22c55e;color:#22c55e;box-shadow:0 0 30px rgba(34,197,94,.25)}
 .grade-circle.ok{border-color:#eab308;color:#eab308;box-shadow:0 0 30px rgba(234,179,8,.2)}
 .grade-circle.bad{border-color:#ef4444;color:#ef4444;box-shadow:0 0 30px rgba(239,68,68,.2)}
