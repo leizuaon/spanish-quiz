@@ -1,6 +1,6 @@
-let words=[], round=[], idx=0, correct=0, answers=[], currentOptions=[];
+let words=[], round=[], idx=0, correct=0, answers=[];
 const $=s=>document.getElementById(s);
-const STORAGE_KEY='spanish_quiz_scores';
+const STORAGE_KEY='hebrew_english_quiz_scores';
 
 function getHistory(){try{return JSON.parse(localStorage.getItem(STORAGE_KEY))||[]}catch{return[]}}
 function saveScore(grade){const h=getHistory();h.push({grade,date:new Date().toISOString()});localStorage.setItem(STORAGE_KEY,JSON.stringify(h));}
@@ -14,48 +14,22 @@ function showWord(){
   $('progress').textContent=`${idx+1} / 10`;
   $('progressFill').style.width=`${(idx+1)*10}%`;
   $('score').textContent=`${correct} ✓`;
-  $('spanishWord').textContent=round[idx].es;
+  $('hebrewWord').textContent=round[idx].he;
+  $('answerInput').value='';
   $('feedback').innerHTML='&nbsp;';
-  
-  const cur=round[idx];
-  const correct_en=cur.en[0];
-  const wrong_options=shuffle(words.filter(w=>w.en[0]!==correct_en).map(w=>w.en[0])).slice(0,4);
-  currentOptions=shuffle([correct_en,...wrong_options]);
-  
-  document.querySelectorAll('.option-btn').forEach((btn,i)=>{
-    btn.textContent=currentOptions[i];
-    btn.className='option-btn';
-    btn.disabled=false;
-    btn.onclick=()=>selectOption(i);
-  });
+  $('answerInput').focus();
 }
 
-function selectOption(selectedIdx){
-  const cur=round[idx];
-  const selected=currentOptions[selectedIdx];
-  const correct_en=cur.en[0];
-  const ok=selected===correct_en;
-  
-  document.querySelectorAll('.option-btn').forEach((btn,i)=>{
-    btn.disabled=true;
-    if(i===selectedIdx){
-      btn.classList.add(ok?'correct':'wrong');
-    }else if(currentOptions[i]===correct_en){
-      btn.classList.add('correct');
-    }
-  });
-  
-  if(ok){
-    correct++;
-    $('feedback').textContent='✅ Correct!';
-  }else{
-    $('feedback').textContent=`❌ Correct answer: ${correct_en}`;
-  }
-  
-  answers.push({es:cur.es,given:selected,accepted:cur.en,ok});
+function submit(){
+  const cur=round[idx], user=$('answerInput').value, un=norm(user);
+  const valid=cur.en.map(norm);
+  const ok=valid.some(v=>fuzzy(un,v));
+  if(ok){correct++;$('feedback').textContent='✅ Correct!'}
+  else{$('feedback').textContent=`❌ Accepted: ${cur.en.join(', ')}`}
+  answers.push({he:cur.he,given:user,accepted:cur.en,ok});
   idx++;
-  if(idx>=10) return setTimeout(finish,800);
-  setTimeout(showWord,800);
+  if(idx>=10) return setTimeout(finish,450);
+  setTimeout(showWord,450);
 }
 
 function finish(){
@@ -69,7 +43,7 @@ function finish(){
   $('summary').textContent=`${correct}/10 correct answers`;
   $('review').innerHTML=answers.map(a=>
     `<div class="review-row ${a.ok?'was-correct':''}">
-      <span class="es">${a.es}</span>
+      <span class="he">${a.he}</span>
       <span class="yours">${a.given||'—'}</span>
       <span class="correct-ans">${a.accepted[0]}</span>
     </div>`).join('');
@@ -85,12 +59,10 @@ function start(){
   showWord();
 }
 
-/* ── Chart ── */
 function renderChart(){
   const hist=getHistory();
   const scores=hist.map(h=>h.grade);
 
-  // Stats
   $('statGames').textContent=scores.length;
   $('statAvg').textContent=scores.length?Math.round(scores.reduce((a,b)=>a+b,0)/scores.length):'—';
   $('statBest').textContent=scores.length?Math.max(...scores):'—';
@@ -113,7 +85,6 @@ function renderChart(){
   const pad={t:20,r:16,b:30,l:36};
   const cw=w-pad.l-pad.r, ch=h-pad.t-pad.b;
 
-  // Grid lines
   ctx.strokeStyle='#1e293b'; ctx.lineWidth=1;
   for(let v=0;v<=100;v+=25){
     const y=pad.t+ch*(1-v/100);
@@ -122,12 +93,10 @@ function renderChart(){
     ctx.fillText(v,pad.l-6,y+4);
   }
 
-  // Show last 20 games max
   const show=scores.slice(-20);
   const n=show.length;
   const gap=n>1?cw/(n-1):0;
 
-  // Line
   ctx.beginPath();
   ctx.strokeStyle='#ea580c';ctx.lineWidth=2.5;ctx.lineJoin='round';
   show.forEach((s,i)=>{
@@ -136,7 +105,6 @@ function renderChart(){
   });
   ctx.stroke();
 
-  // Fill area
   const lastX=pad.l+(n>1?(n-1)*gap:cw/2);
   ctx.lineTo(lastX,pad.t+ch);
   ctx.lineTo(pad.l,pad.t+ch);
@@ -145,7 +113,6 @@ function renderChart(){
   grad.addColorStop(0,'rgba(234,88,12,0.25)');grad.addColorStop(1,'rgba(234,88,12,0)');
   ctx.fillStyle=grad;ctx.fill();
 
-  // Dots
   show.forEach((s,i)=>{
     const x=pad.l+(n>1?i*gap:cw/2), y=pad.t+ch*(1-s/100);
     ctx.beginPath();ctx.arc(x,y,4,0,Math.PI*2);
@@ -153,7 +120,6 @@ function renderChart(){
     ctx.strokeStyle='#0f172a';ctx.lineWidth=2;ctx.stroke();
   });
 
-  // X labels
   ctx.fillStyle='#475569';ctx.font='10px system-ui';ctx.textAlign='center';
   show.forEach((s,i)=>{
     if(n<=10||i%Math.ceil(n/10)===0||i===n-1){
@@ -164,11 +130,13 @@ function renderChart(){
 }
 
 async function init(){
-  const r=await fetch("words-es-en.json");
+  const r=await fetch('words-he-en.json');
   words=await r.json();
-  $("startBtn").addEventListener("click",start);
-  $("restartBtn").addEventListener("click",start);
-  $("clearBtn").addEventListener("click",()=>{if(confirm("Clear all progress?")){localStorage.removeItem(STORAGE_KEY);renderChart()}});
+  $('startBtn').addEventListener('click',start);
+  $('submitBtn').addEventListener('click',submit);
+  $('answerInput').addEventListener('keydown',e=>{if(e.key==='Enter')submit()});
+  $('restartBtn').addEventListener('click',start);
+  $('clearBtn').addEventListener('click',()=>{if(confirm('Clear all progress?')){localStorage.removeItem(STORAGE_KEY);renderChart()}});
   renderChart();
 }
 init();

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Spanish → English Quiz</title>
+  <title>Hebrew → English Quiz</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -12,16 +12,15 @@
 <body>
   <main class="card">
     <div class="card-header">
-      <span class="logo">🇪🇸</span>
-      <h1>Español Quiz</h1>
-      <p class="subtitle">Master 1 000 Spanish words</p>
+      <span class="logo">🇮🇱</span>
+      <h1>English Quiz</h1>
+      <p class="subtitle">Learn English from Hebrew words</p>
     </div>
 
     <section id="start">
-      <div class="hero-icon">💬</div>
-      <p class="intro">Translate <strong>10 random</strong> Spanish words into English.<br>Synonyms &amp; word-forms accepted!</p>
+      <div class="hero-icon">🗣️</div>
+      <p class="intro">Translate <strong>10 random</strong> Hebrew words into English.<br>Synonyms &amp; word-forms accepted!</p>
       <button id="startBtn" class="btn-primary btn-glow">▶&ensp;Start Quiz</button>
-      <a href="learning-english/" class="btn-ghost" style="display:inline-block;text-decoration:none;margin-top:12px;">🇮🇱 Hebrew → English version</a>
     </section>
 
     <section id="game" class="hidden">
@@ -31,15 +30,12 @@
         <span class="pill accent" id="score">0 ✓</span>
       </div>
       <div class="word-card">
-        <small class="label">Translate this word</small>
-        <h2 id="spanishWord">palabra</h2>
+        <small class="label">Translate this Hebrew word</small>
+        <h2 id="hebrewWord" dir="rtl">מילה</h2>
       </div>
-      <div id="optionsWrap" class="options-wrap">
-        <button class="option-btn" data-idx="0"></button>
-        <button class="option-btn" data-idx="1"></button>
-        <button class="option-btn" data-idx="2"></button>
-        <button class="option-btn" data-idx="3"></button>
-        <button class="option-btn" data-idx="4"></button>
+      <div class="input-wrap">
+        <input id="answerInput" type="text" placeholder="English…" autocomplete="off" autofocus spellcheck="false" />
+        <button id="submitBtn" class="btn-primary">→</button>
       </div>
       <p id="feedback">&nbsp;</p>
     </section>

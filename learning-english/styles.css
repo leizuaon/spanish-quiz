@@ -1,19 +1,18 @@
-/* ── Reset & Base ── */
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
   font-family:'Inter',system-ui,-apple-system,sans-serif;
-  background:linear-gradient(180deg,#12101f 0%,#0f172a 100%);color:#e2e8f0;
-  display:grid;place-items:center;min-height:100vh;
+  background:linear-gradient(180deg,#12101f 0%,#0f172a 100%);
+  color:#e2e8f0;
+  display:grid;
+  place-items:center;
+  min-height:100vh;
   overflow-x:hidden;
 }
 
-/* ── Static background ── */
-.card{pointer-events:auto}
-
-/* ── Card ── */
 .card{
-  position:relative;z-index:1;
+  position:relative;
+  z-index:1;
   width:min(500px,90vw);
   background:rgba(28,25,43,.95);
   border:1px solid rgba(234,88,12,.1);
@@ -23,20 +22,18 @@ body{
   box-shadow:0 8px 24px rgba(0,0,0,.28);
 }
 
-/* ── Header ── */
 .card-header{margin-bottom:24px}
 .logo{font-size:2.8rem;display:block;margin-bottom:4px}
 h1{font-size:1.7rem;font-weight:800;letter-spacing:-.02em;
-  background:linear-gradient(135deg,#f59e0b,#ef4444,#a855f7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  background:linear-gradient(135deg,#f59e0b,#ef4444,#a855f7);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
 }
 .subtitle{color:#94a3b8;font-size:.9rem;margin-top:4px}
 
-/* ── Start Section ── */
 .hero-icon{font-size:3rem;margin-bottom:12px}
 .intro{color:#94a3b8;line-height:1.6;margin-bottom:20px;font-size:.95rem}
 .intro strong{color:#e2e8f0}
 
-/* ── Buttons ── */
 .btn-primary{
   display:inline-flex;align-items:center;justify-content:center;gap:6px;
   width:100%;padding:15px 24px;border-radius:14px;border:none;
@@ -46,7 +43,7 @@ h1{font-size:1.7rem;font-weight:800;letter-spacing:-.02em;
 }
 .btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(234,88,12,.4)}
 .btn-primary:active{transform:translateY(0)}
-.btn-glow{box-shadow:0 0 28px rgba(234,88,12,.3)}
+.btn-glow{box-shadow:0 0 18px rgba(234,88,12,.25)}
 .btn-ghost{
   background:transparent;border:1px solid #334155;color:#94a3b8;
   padding:10px 20px;border-radius:10px;font-size:.85rem;cursor:pointer;
@@ -54,32 +51,18 @@ h1{font-size:1.7rem;font-weight:800;letter-spacing:-.02em;
 }
 .btn-ghost:hover{border-color:#64748b;color:#e2e8f0}
 
-/* ── Game Section ── */
 .game-bar{display:flex;align-items:center;gap:10px;margin-bottom:18px}
 .pill{font-size:.8rem;font-weight:600;padding:5px 12px;border-radius:20px;background:rgba(234,88,12,.15);color:#fdba74;white-space:nowrap}
 .pill.accent{background:rgba(34,197,94,.15);color:#86efac}
 .progress-track{flex:1;height:6px;background:rgba(148,163,184,.12);border-radius:3px;overflow:hidden}
-.progress-fill{height:100%;width:10%;background:linear-gradient(90deg,#ea580c,#f59e0b);border-radius:3px;transition:width .4s ease}
+.progress-fill{height:100%;width:10%;background:linear-gradient(90deg,#ea580c,#f59e0b);border-radius:3px;transition:width .3s ease}
 
 .word-card{
   background:rgba(15,23,42,.5);border:1px solid rgba(148,163,184,.08);
   border-radius:16px;padding:28px 20px;margin-bottom:18px;
 }
 .word-card .label{color:#64748b;font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;display:block;margin-bottom:8px}
-.word-card h2{font-size:2.4rem;font-weight:700;letter-spacing:.01em;margin:0;
-}
-
-.options-wrap{display:grid;grid-template-columns:1fr;gap:10px;margin:24px 0}
-.option-btn{
-  padding:14px 16px;border:2px solid #cbd5e1;border-radius:8px;
-  background:#fff;color:#0f172a;font-size:15px;font-weight:500;
-  cursor:pointer;transition:all 200ms ease;text-align:left;
-}
-.option-btn:hover:not(:disabled){border-color:#ea580c;background:#fff7ed;transform:translateX(4px)}
-.option-btn.selected{border-color:#ea580c;background:#ea580c;color:#fff}
-.option-btn.correct{border-color:#22c55e;background:#22c55e;color:#fff}
-.option-btn.wrong{border-color:#ef4444;background:#ef4444;color:#fff}
-.option-btn:disabled{opacity:0.6;cursor:not-allowed}
+.word-card h2{font-size:2.3rem;font-weight:700;letter-spacing:.01em;margin:0}
 
 .input-wrap{display:flex;gap:10px}
 .input-wrap input{
@@ -91,18 +74,17 @@ h1{font-size:1.7rem;font-weight:800;letter-spacing:-.02em;
 .input-wrap input:focus{border-color:#ea580c;box-shadow:0 0 0 3px rgba(234,88,12,.15)}
 .input-wrap .btn-primary{width:56px;flex-shrink:0;font-size:1.3rem;padding:0;border-radius:12px}
 
-#feedback{min-height:28px;margin-top:12px;font-size:.95rem;font-weight:500;transition:opacity .3s}
+#feedback{min-height:28px;margin-top:12px;font-size:.95rem;font-weight:500}
 .hidden{display:none}
 
-/* ── Result Section ── */
 .grade-circle{
   width:130px;height:130px;border-radius:50%;display:grid;place-items:center;
   margin:8px auto 16px;font-size:2.6rem;font-weight:800;
   border:5px solid #ea580c;position:relative;
 }
-.grade-circle.great{border-color:#22c55e;color:#22c55e;box-shadow:0 0 30px rgba(34,197,94,.25)}
-.grade-circle.ok{border-color:#eab308;color:#eab308;box-shadow:0 0 30px rgba(234,179,8,.2)}
-.grade-circle.bad{border-color:#ef4444;color:#ef4444;box-shadow:0 0 30px rgba(239,68,68,.2)}
+.grade-circle.great{border-color:#22c55e;color:#22c55e;box-shadow:0 0 18px rgba(34,197,94,.2)}
+.grade-circle.ok{border-color:#eab308;color:#eab308;box-shadow:0 0 18px rgba(234,179,8,.18)}
+.grade-circle.bad{border-color:#ef4444;color:#ef4444;box-shadow:0 0 18px rgba(239,68,68,.18)}
 .summary-text{color:#94a3b8;margin-bottom:14px;font-size:.95rem}
 
 #review{text-align:left;margin:14px 0;max-height:220px;overflow-y:auto;border-radius:12px}
@@ -112,15 +94,12 @@ h1{font-size:1.7rem;font-weight:800;letter-spacing:-.02em;
   display:flex;justify-content:space-between;padding:10px 14px;
   font-size:.88rem;border-radius:8px;margin-bottom:4px;
   background:rgba(15,23,42,.4);
-  transition:background .2s;
 }
-.review-row:hover{background:rgba(15,23,42,.7)}
-.review-row .es{color:#94a3b8;flex:1}
+.review-row .he{color:#94a3b8;flex:1;direction:rtl;text-align:left}
 .review-row .yours{color:#f87171;flex:1;text-align:center;font-weight:500}
 .review-row .correct-ans{color:#4ade80;flex:1;text-align:right}
 .review-row.was-correct .yours{color:#4ade80}
 
-/* ── Progress Section ── */
 .section-divider{height:1px;background:linear-gradient(90deg,transparent,rgba(148,163,184,.15),transparent);margin:28px 0 20px}
 .section-title{font-size:1.2rem;font-weight:700;margin-bottom:16px}
 
@@ -128,16 +107,13 @@ h1{font-size:1.7rem;font-weight:800;letter-spacing:-.02em;
 .stat-card{
   background:rgba(15,23,42,.45);border:1px solid rgba(148,163,184,.08);
   border-radius:14px;padding:14px 8px;text-align:center;
-  transition:transform .2s,border-color .2s;
 }
-.stat-card:hover{transform:translateY(-2px);border-color:rgba(234,88,12,.3)}
 .stat-card span{display:block;font-size:1.5rem;font-weight:800;background:linear-gradient(135deg,#f59e0b,#ef4444);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .stat-card small{color:#64748b;font-size:.75rem;text-transform:uppercase;letter-spacing:.05em}
 
 #chart{width:100%;height:200px;border-radius:14px;background:rgba(15,23,42,.45);border:1px solid rgba(148,163,184,.08);margin-bottom:10px}
 .muted{color:#475569;font-size:.85rem}
 
-/* ── Responsive ── */
 @media(max-width:440px){
   .card{padding:24px 18px;border-radius:18px}
   .word-card h2{font-size:1.8rem}
