@@ -35,6 +35,14 @@ h1{font-size:1.7rem;font-weight:800;letter-spacing:-.02em;
 .hero-icon{font-size:3rem;margin-bottom:12px}
 .intro{color:#94a3b8;line-height:1.6;margin-bottom:20px;font-size:.95rem}
 .intro strong{color:#e2e8f0}
+.category-picker{display:flex;flex-direction:column;gap:8px;margin:0 0 16px;text-align:left}
+.category-picker label{font-size:.82rem;color:#94a3b8;font-weight:600;letter-spacing:.02em}
+.category-picker select{
+  width:100%;padding:11px 12px;border-radius:10px;
+  border:1px solid #334155;background:#0f172a;color:#e2e8f0;
+  font-family:inherit;font-size:.92rem;outline:none;
+}
+.category-picker select:focus{border-color:#ea580c;box-shadow:0 0 0 3px rgba(234,88,12,.14)}
 
 /* ── Buttons ── */
 .btn-primary{
@@ -60,6 +68,7 @@ h1{font-size:1.7rem;font-weight:800;letter-spacing:-.02em;
 .pill.accent{background:rgba(34,197,94,.15);color:#86efac}
 .progress-track{flex:1;height:6px;background:rgba(148,163,184,.12);border-radius:3px;overflow:hidden}
 .progress-fill{height:100%;width:10%;background:linear-gradient(90deg,#ea580c,#f59e0b);border-radius:3px;transition:width .4s ease}
+.active-category{font-size:.8rem;color:#cbd5e1;background:rgba(15,23,42,.55);border:1px solid rgba(148,163,184,.12);border-radius:999px;padding:5px 10px;display:inline-block;margin:0 0 12px}
 
 .word-card{
   background:rgba(15,23,42,.5);border:1px solid rgba(148,163,184,.08);

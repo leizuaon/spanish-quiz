@@ -19,7 +19,16 @@
 
     <section id="start">
       <div class="hero-icon">💬</div>
-      <p class="intro">Translate <strong>10 random</strong> Spanish words into English.<br>Synonyms &amp; word-forms accepted!</p>
+      <p class="intro">Translate <strong>10 random</strong> Spanish words into English.<br>Now with category mode.</p>
+      <div class="category-picker">
+        <label for="categorySelect">Choose category</label>
+        <select id="categorySelect">
+          <option value="all">All words</option>
+          <option value="food">Food</option>
+          <option value="travel">Travel</option>
+          <option value="daily">Day-to-day</option>
+        </select>
+      </div>
       <button id="startBtn" class="btn-primary btn-glow">▶&ensp;Start Quiz</button>
       <a href="learning-english/" class="btn-ghost" style="display:inline-block;text-decoration:none;margin-top:12px;">🇮🇱 Hebrew → English version</a>
     </section>
@@ -30,6 +39,7 @@
         <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
         <span class="pill accent" id="score">0 ✓</span>
       </div>
+      <div class="active-category" id="activeCategory">Category: All words</div>
       <div class="word-card">
         <small class="label">Translate this word</small>
         <h2 id="spanishWord">palabra</h2>

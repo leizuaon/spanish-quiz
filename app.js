@@ -1,6 +1,21 @@
-let words=[], round=[], idx=0, correct=0, answers=[], currentOptions=[];
+let words=[], round=[], idx=0, correct=0, answers=[], currentOptions=[], selectedCategory='all';
 const $=s=>document.getElementById(s);
 const STORAGE_KEY='spanish_quiz_scores';
+const CATEGORY_LABELS={all:'All words',food:'Food',travel:'Travel',daily:'Day-to-day'};
+const CATEGORY_KEYWORDS={
+  food:[
+    'food','eat','drink','water','coffee','tea','milk','bread','rice','meat','fish','chicken','egg',
+    'fruit','vegetable','apple','banana','orange','salt','sugar','cook','kitchen','breakfast','lunch','dinner'
+  ],
+  travel:[
+    'travel','trip','journey','flight','airport','station','train','bus','car','taxi','ticket','hotel',
+    'map','street','road','city','country','tourist','passport','luggage','bag','beach','mountain'
+  ],
+  daily:[
+    'day','morning','afternoon','night','today','tomorrow','yesterday','home','house','work','school',
+    'family','friend','money','phone','time','week','month','year','sleep','walk','talk','help','clean'
+  ]
+};
 
 function getHistory(){try{return JSON.parse(localStorage.getItem(STORAGE_KEY))||[]}catch{return[]}}
 function saveScore(grade){const h=getHistory();h.push({grade,date:new Date().toISOString()});localStorage.setItem(STORAGE_KEY,JSON.stringify(h));}
@@ -10,16 +25,51 @@ function stem(w){return w.replace(/(ing|ed|es|s|ly|er|est|ness|ment|tion|ous|ful
 function fuzzy(a,b){if(a===b)return true;const sa=stem(a),sb=stem(b);if(sa===sb&&sa.length>=2)return true;if(a.length>=3&&b.length>=3&&(a.startsWith(b)||b.startsWith(a)))return true;return false}
 function shuffle(a){let b=[...a];for(let i=b.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[b[i],b[j]]=[b[j],b[i]]}return b}
 
+function assignCategory(word){
+  const txt=(word.en||[]).map(norm).join(' ');
+  for(const category of ['food','travel','daily']){
+    for(const kw of CATEGORY_KEYWORDS[category]){
+      const re=new RegExp(`\\b${kw.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}\\b`,'i');
+      if(re.test(txt)) return category;
+    }
+  }
+  return 'daily';
+}
+
+function getCategoryPool(){
+  if(selectedCategory==='all') return words;
+  const pool=words.filter(w=>w.category===selectedCategory);
+  return pool.length>=10?pool:words;
+}
+
+function uniquePrimaryTranslations(pool, exclude=[]){
+  const seen=new Set(exclude.map(norm));
+  const out=[];
+  for(const w of shuffle(pool)){
+    const t=(w.en&&w.en[0])?w.en[0]:'';
+    const nt=norm(t);
+    if(!t||seen.has(nt)) continue;
+    seen.add(nt);
+    out.push(t);
+  }
+  return out;
+}
+
 function showWord(){
   $('progress').textContent=`${idx+1} / 10`;
   $('progressFill').style.width=`${(idx+1)*10}%`;
   $('score').textContent=`${correct} ✓`;
+  $('activeCategory').textContent=`Category: ${CATEGORY_LABELS[selectedCategory]}`;
   $('spanishWord').textContent=round[idx].es;
   $('feedback').innerHTML='&nbsp;';
   
   const cur=round[idx];
   const correct_en=cur.en[0];
-  const wrong_options=shuffle(words.filter(w=>w.en[0]!==correct_en).map(w=>w.en[0])).slice(0,4);
+  const pool=getCategoryPool();
+  const wrong_options=uniquePrimaryTranslations(pool,[correct_en]).slice(0,4);
+  if(wrong_options.length<4){
+    wrong_options.push(...uniquePrimaryTranslations(words,[correct_en,...wrong_options]).slice(0,4-wrong_options.length));
+  }
   currentOptions=shuffle([correct_en,...wrong_options]);
   
   document.querySelectorAll('.option-btn').forEach((btn,i)=>{
@@ -78,7 +128,8 @@ function finish(){
 
 function start(){
   idx=0;correct=0;answers=[];
-  round=shuffle(words).slice(0,10);
+  selectedCategory=$('categorySelect').value;
+  round=shuffle(getCategoryPool()).slice(0,10);
   $('start').classList.add('hidden');
   $('result').classList.add('hidden');
   $('game').classList.remove('hidden');
@@ -166,6 +217,7 @@ function renderChart(){
 async function init(){
   const r=await fetch("words-es-en.json");
   words=await r.json();
+  words=words.map(w=>({...w,category:assignCategory(w)}));
   $("startBtn").addEventListener("click",start);
   $("restartBtn").addEventListener("click",start);
   $("clearBtn").addEventListener("click",()=>{if(confirm("Clear all progress?")){localStorage.removeItem(STORAGE_KEY);renderChart()}});
